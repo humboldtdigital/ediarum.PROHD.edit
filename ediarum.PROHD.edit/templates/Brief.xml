@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemata/prohd.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="letter"
+    xml:id="ed_${id}">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>${ask('Titel der Ausgabe einfügen', generic, '')}</title>
+            </titleStmt>
+            <editionStmt>
+                <p>Erste Ausgabe von Projekt Humboldt digital - ProHD (<date>${ask('Jahr der Publikation', generic, '')}</date>).</p>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>${ask('Herausgebende Institution', generic, '')}</publisher>
+                <availability status="free">
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Namensnennung 4.0 International (CC BY 4.0) </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc rend="manuscript">
+                    <msIdentifier>
+                        <institution>${ask('Archiv eingeben', generic, '')}</institution>
+                        <collection>${ask('Ggf. Sammlung', generic, '')}</collection>
+                        <idno>${ask('Signatur', generic, '')}</idno>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="deu">Deutsch</language>
+            </langUsage>
+            <correspDesc>
+                <correspAction type="sent"> </correspAction>
+                <correspAction type="received"> </correspAction>
+            </correspDesc>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="writingSession">
+                <opener>
+                    <dateline/>
+                    <salute/>
+                </opener>
+                <p/>
+                <closer>
+                    <salute/>
+                    <signed/>
+                </closer>
+            </div>
+        </body>
+    </text>
+</TEI>
