@@ -1,7 +1,8 @@
 <translation>
     <languageList>
-        <language description="German" lang="de_DE"/>
+        <!-- Please set the order of preferences: the first position is the default language -->
         <language description="Spanish" lang="es_ES"/>
+        <language description="German" lang="de_DE"/>
     </languageList>
     <key value="ex.name">
         <val lang="de_DE">Ergänzung</val>
@@ -125,7 +126,7 @@
     </key>
     <key value="placeName.name">
         <val lang="de_DE">Ortsname</val>
-        <val lang="es_ES">Nombre del lugar</val>
+        <val lang="es_ES">Nombre de lugar</val>
     </key>
     <key value="placeName.description">
         <val lang="de_DE">Im Manuskript explizit erwähnten Ort kennzeichnen</val>
@@ -133,7 +134,7 @@
     </key>
     <key value="supplied.name">
         <val lang="de_DE">Fehlendes Wort</val>
-        <val lang="es_ES">Palabra suplida</val>
+        <val lang="es_ES">Palabra suplida por el editor</val>
     </key>
     <key value="supplied.description">
         <val lang="de_DE">Fehlendes Wort oder Satzzeichen, durch Herausgeber ergänzt</val>
@@ -157,7 +158,7 @@
     </key>
     <key value="wit(Druck).name">
         <val lang="de_DE">Überlieferung: Druck</val>
-        <val lang="es_ES">Tradición: impreso</val>
+        <val lang="es_ES">Tradición impresa</val>
     </key>
     <key value="wit(Druck).description">
         <val lang="de_DE">Nachweis eines überlieferten Drucks hinzufügen</val>
@@ -165,7 +166,7 @@
     </key>
     <key value="wit(Manuskript).name">
         <val lang="de_DE">Überlieferung: Abschrift, Entwurf ...</val>
-        <val lang="es_ES">Tradición: transcripción, borrador...</val>
+        <val lang="es_ES">Tradición manuscrita: transcripción, borrador...</val>
     </key>
     <key value="wit(Manuskript).description">
         <val lang="de_DE">Nachweis einer weiteren Handschrift (Abschrift, Entwurf etc.) hinzufügen</val>
@@ -173,7 +174,7 @@
     </key>
     <key value="profileDesc_date-notBeforeAfter.name">
         <val lang="de_DE">Ungefährer Erstellungszeitraum</val>
-        <val lang="es_ES">Periodo de creación aproximado</val>
+        <val lang="es_ES">Período de creación aproximado</val>
     </key>
     <key value="profileDesc_date-notBeforeAfter.description">
         <val lang="de_DE">Zeitraum der Erstellung des Manuskripts bzw. Drucks</val>
@@ -181,7 +182,7 @@
     </key>
     <key value="bibl.name">
         <val lang="de_DE">Werktitel</val>
-        <val lang="es_ES">Título de la obra</val>
+        <val lang="es_ES">Título de obra</val>
     </key>
     <key value="bibl.description">
         <val lang="de_DE">Im Manuskript explizit erwähnte Werktitel kennzeichnen</val>
@@ -189,11 +190,11 @@
     </key>
     <key value="del_gap.name">
         <val lang="de_DE">Nicht entzifferbarer Text, durchgestrichen</val>
-        <val lang="es_ES">Texto indescifrable, tachado</val>
+        <val lang="es_ES">Texto indescifrable debido al tachado</val>
     </key>
     <key value="del_gap.description">
         <val lang="de_DE">Nicht entzifferbarer Text, durchgestrichen</val>
-        <val lang="es_ES">Texto indescifrable, tachado</val>
+        <val lang="es_ES">Texto indescifrable debido al tachado</val>
     </key>
     <key value="date-fromto.name">
         <val lang="de_DE">Genaue Zeitspanne</val>
@@ -221,7 +222,7 @@
     </key>
     <key value="profileDesc_date-fromto.name">
         <val lang="de_DE">Erstellungszeitspanne</val>
-        <val lang="es_ES">Período de creación</val>
+        <val lang="es_ES">Período de creación exacto</val>
     </key>
     <key value="profileDesc_date-fromto.description">
         <val lang="de_DE">Zeitspanne der Erstellung des Manuskripts bzw. Drucks</val>
@@ -392,7 +393,7 @@
     </key>
     <key value="table.join.row.cells.name">
         <val lang="de_DE">Zellen verbinden</val>
-        <val lang="es_ES">Unión de celdas dentro de filas / renglones</val>
+        <val lang="es_ES">Unir celdas dentro de filas / renglones</val>
     </key>
     <key value="table.join.row.cells.description">
         <val lang="de_DE">Verbindet Zellen in einer Tabelle</val>
@@ -548,7 +549,7 @@
     </key>
     <key value="writingSession.name">
         <val lang="de_DE">Neuen Schreibakt beginnen</val>
-        <val lang="es_ES">Iniciar un nuevo acto de escritura</val>
+        <val lang="es_ES">Inicio de un nuevo acto de escritura</val>
     </key>
     <key value="writingSession.description">
         <val lang="de_DE">Weiterer Schreibakt, d.h. nicht unerhebliche Ergänzung des Briefs nach geraumer Zeit</val>
@@ -948,7 +949,7 @@
     </key>
     <key value="orgName.name">
         <val lang="de_DE">Organisationsname</val>
-        <val lang="es_ES">Nombre de la organización</val>
+        <val lang="es_ES">Nombre de organización</val>
     </key>
     <key value="orgName.description">
         <val lang="de_DE">Im Manuskript explizit erwähnte Institution, Firma oder sonstige Organisation kennzeichnen und verlinken</val>
@@ -1028,7 +1029,7 @@
     </key>
     <key value="@rendition=&quot;mPrint&quot;.name">
         <val lang="de_DE">Absatz, Adresse etc. ist vorgedruckter Text</val>
-        <val lang="es_ES">El párrafo, la dirección, etc. es un texto preimpreso</val>
+        <val lang="es_ES">Texto preimpreso</val>
     </key>
     <key value="@rendition=&quot;mPrint&quot;.description">
         <val lang="de_DE"></val>
