@@ -5,7 +5,7 @@
 - Development and localisation into Spanish by Antonio Rojas Castro.
 - Contact: antonio.rojas-castro[at]bbaw.de
 
-Information on the *framework*
+# Information on the *framework*
 
 - This repository contains the latest public version of the *framework* for editing Humboldt Digital Project (ProHD).
 - Oxygen XML editor *framework* based on [ediarum.BASE.edit](https://www.ediarum.org/).
