@@ -52,14 +52,12 @@
             <assert test="matches(@corresp, '^#|^https?://')" role="ERROR"> [E0028] The value of
                 attribute @corresp must be a URL or same document reference starting with 'http://'
                 or 'https://' or '#'. </assert>
-            <assert
-                test="
+            <assert test="
                     if (starts-with(@corresp, '#')) then
                         //@xml:id = substring-after(@corresp, '#')
                     else
-                        1"
-                role="error"> [E0026] The value of attribute @corresp must have a corresponding
-                @xml:id-value within the same document. </assert>
+                        1" role="error"> [E0026] The value of attribute @corresp must
+                have a corresponding @xml:id-value within the same document. </assert>
         </rule>
     </pattern>
 
@@ -71,7 +69,7 @@
         </rule>
     </pattern>
 
-<!--    <pattern id="facsInsideFirstPagebreak">
+    <!--    <pattern id="facsInsideFirstPagebreak">
         <rule context="tei:pb[1][not(preceding::tei:pb)]">
             <assert test="@facs[matches(., '^#f0001$')]" role="ERROR"> [E0015] Value of @facs within
                 first "pb" incorrect; expected value: #f0001. </assert>
@@ -80,14 +78,13 @@
 
     <pattern id="facsInsidePagebreaks">
         <rule context="tei:pb[@facs]">
-            <assert
-                test="
+            <assert test="
                     if (matches(@facs, '^#f\d\d\d\d') and matches(preceding::tei:pb[1]/@facs, '^#f\d\d\d\d') and (preceding::tei:pb)) then
                         xs:integer(substring(@facs, 3)) = preceding::tei:pb[1]/xs:integer(substring(@facs, 3)) + 1
                     else
-                        1"
-                role="ERROR"> [E0014] Value of @facs within "pb" incorrect; @facs-values of
-                "pb"-elements have to increase by 1 continually starting with #f0001. </assert>
+                        1" role="ERROR"> [E0014] Value of @facs within "pb" incorrect;
+                @facs-values of "pb"-elements have to increase by 1 continually starting with
+                #f0001. </assert>
         </rule>
     </pattern>
 
@@ -135,18 +132,16 @@
         <rule context="tei:*[@next]">
             <assert test="starts-with(@next, '#')" role="ERROR"> [E0017] The value of attribute
                 @next must be a same document reference starting with '#'. </assert>
-            <assert
-                test="
+            <assert test="
                     if (starts-with(@next, '#')) then
                         //@xml:id = substring-after(@next, '#')
                     else
-                        1"
-                role="error"> [E0019] The value of attribute @next must have a corresponding
-                @xml:id-value within the same document. </assert>
+                        1" role="error"> [E0019] The value of attribute @next must have
+                a corresponding @xml:id-value within the same document. </assert>
         </rule>
     </pattern>
 
-<!--    <pattern id="noteElement">
+    <!--    <pattern id="noteElement">
         <rule context="tei:note">
             <assert test="@type or @place" role="ERROR"> [E0035] Element " <name/> " must contain an
                 attribute @place or @type. </assert>
@@ -156,7 +151,7 @@
         </rule>
     </pattern>
 -->
-<!--    <pattern id="pbElement">
+    <!--    <pattern id="pbElement">
         <rule context="tei:pb">
             <assert
                 test="@facs[matches(., '#f[0-9]{4}')] and @facs[matches(., '^#f0*([1-9][0-9]*)$')]"
@@ -170,14 +165,12 @@
         <rule context="tei:*[@prev]">
             <assert test="starts-with(@prev, '#')" role="ERROR"> [E0025] The value of attribute
                 @prev must be a same document reference starting with '#'. </assert>
-            <assert
-                test="
+            <assert test="
                     if (starts-with(@prev, '#')) then
                         //@xml:id = substring-after(@prev, '#')
                     else
-                        1"
-                role="error"> [E0021] The value of attribute @prev must have a corresponding
-                @xml:id-value within the same document. </assert>
+                        1" role="error"> [E0021] The value of attribute @prev must have
+                a corresponding @xml:id-value within the same document. </assert>
         </rule>
     </pattern>
 
@@ -207,7 +200,7 @@
         </rule>
     </pattern>
 
-<!--    <pattern id="sameAsAttribute">
+    <!--    <pattern id="sameAsAttribute">
         <rule context="tei:*[@sameAs]">
             <assert test="starts-with(@sameAs, '#')" role="ERROR"> [E0022] The value of attribute
                 @sameAs must be a same document reference starting with '#'. </assert>
@@ -249,30 +242,24 @@
             <assert test="matches(@target, '^#|^https?://')" role="ERROR"> [E0024] The value of
                 attribute @target must be a URL or same document reference starting with 'http://'
                 or 'https://' or '#' or '#f'. </assert>
-            <assert
-                test="
+            <assert test="
                     if (starts-with(@target, '#') and not(starts-with(@target, '#f'))) then
                         //@xml:id = substring-after(@target, '#')
                     else
-                        1"
-                role="error"> [E0032] Value of attribute @target must have a corresponding
-                @xml:id-value within the same document.</assert>
-            <assert
-                test="
+                        1" role="error"> [E0032] Value of attribute @target must have a
+                corresponding @xml:id-value within the same document.</assert>
+            <assert test="
                     if (starts-with(@target, '#f')) then
                         //tei:pb/@facs = //./@target
                     else
-                        1"
-                role="error"> [E0020] Value of attribute @target must have a corresponding
-                @facs-value within a pb element in the same document.</assert>
-            <assert
-                test="
+                        1" role="error"> [E0020] Value of attribute @target must have a
+                corresponding @facs-value within a pb element in the same document.</assert>
+            <assert test="
                     if (. = tei:licence) then
                         starts-with(@target, 'https?://')
                     else
-                        1"
-                role="error"> [E0031] Value of attribute @target must have a corresponding
-                @facs-value within a pb-element in the same document. </assert>
+                        1" role="error"> [E0031] Value of attribute @target must have a
+                corresponding @facs-value within a pb-element in the same document. </assert>
         </rule>
     </pattern>
 
@@ -308,49 +295,83 @@
     </pattern>
 
     <!-- ProHD additions -->
-    
+
     <pattern id="titleStmt">
         <rule context="tei:titleStmt">
             <assert test="tei:editor" role="ERROR">A &lt;titleStmt&gt; element must contain an
                 &lt;editor&gt; element after &lt;title&gt; .</assert>
             <report test="tei:choice" role="ERROR">A &lt;titleStmt&gt; element cannot contain a
                 &lt;choice&gt; element as a children.</report>
-            <!--<assert test="tei:title[position() > 1]" role="ERROR">An edition should contain only one title.</assert>-->
+            <assert test="tei:funder" role="ERROR">A &lt;titleStmt&gt; element must contain a
+                &lt;funder&gt; element after &lt;editor&gt;.</assert>
         </rule>
     </pattern>
 
     <pattern id="title">
         <rule context="tei:titleStmt/tei:title">
-            <report test="child::tei:note | tei:p | tei:choice | tei:lb" role="ERROR">The main
-                title of the edition should be normalized and cannot contain notes, alternative
-                readings or break lines.</report>
+            <report test="child::tei:note | tei:p | tei:choice | tei:lb" role="ERROR">The main title
+                of the edition should be normalized and cannot contain notes, alternative readings
+                or break lines.</report>
         </rule>
     </pattern>
-        
+
+
     <pattern id="editionStmt">
         <rule context="tei:editionStmt">
-            <assert test="tei:p" role="ERROR">The information about the edition should be represented with a &lt;p&gt;.</assert>
+            <assert test="tei:p" role="ERROR">The information about the edition should be
+                represented with a &lt;p&gt;.</assert>
         </rule>
         <rule context="tei:editionStmt/tei:p">
-            <report test="child::tei:note | tei:p | tei:choice | tei:lb" role="ERROR">The
-                edition statement should be normalized and cannot contain notes, alternative
-                readings or break lines.</report>
-            <assert test="tei:date[starts-with(., '20')]" role="ERROR">The
-                edition statement should contain a &lt;date&gt; (publication date, no creation date).</assert>
-        </rule>  
-    </pattern>
-    
-    <pattern id="publicationStmt">
-        <rule context="tei:publicationStmt">
-            <assert test="tei:availability" role="ERROR">A &lt;publicationStmt&gt; element must contain an
-                &lt;availability&gt; element after &lt;publisher&gt;.</assert>
+            <report test="child::tei:note | tei:p | tei:choice | tei:lb" role="ERROR">The edition
+                statement should be normalized and cannot contain notes, alternative readings or
+                break lines.</report>
+            <assert test="tei:date[starts-with(., '20')]" role="ERROR">The edition statement should
+                contain a &lt;date&gt; (publication date, no creation date).</assert>
         </rule>
     </pattern>
-    
+
+
+    <pattern id="publicationStmt">
+        <rule context="tei:publicationStmt">
+            <assert test="tei:publisher" role="ERROR">A &lt;publicationStmt&gt; element must contain
+                an &lt;publisher&gt; element.</assert>
+            <assert test="tei:pubPlace" role="ERROR">A &lt;publicationStmt&gt; element must contain
+                an &lt;pubPlace&gt; element after &lt;publisher&gt;.</assert>
+            <assert test="tei:availability" role="ERROR">A &lt;publicationStmt&gt; element must
+                contain an &lt;availability&gt; element after &lt;pubPlace&gt;.</assert>
+        </rule>
+    </pattern>
+
+    <pattern id="publisher">
+        <rule context="tei:publisher">
+            <assert test="tei:ref" role="ERROR">A &lt;publisher&gt; element must contain a
+                &lt;ref&gt; element.</assert>
+        </rule>
+    </pattern>
+
+    <pattern id="ref">
+        <rule context="tei:ref">
+            <assert test="text()" role="ERROR">A &lt;ref&gt; element must contain a some text inside
+                about the institution publishing the text.</assert>
+        </rule>
+    </pattern>
+
     <pattern id="profileDesc">
         <rule context="tei:profileDesc">
-            <assert test="tei:langUsage/tei:language" role="ERROR">An edition must contain information about the language of the text in 
-                &lt;language&gt; inside &lt;langUsage&gt;.</assert>
+            <assert test="tei:langUsage/tei:language" role="ERROR">An edition must contain
+                information about the language of the text in &lt;language&gt; inside
+                &lt;langUsage&gt;.</assert>
+            <report test="tei:creation/tei:persName[not(matches(., '(.+),(.+)'))]" role="ERROR"
+                >Incorrect format. The surname should go first and be separated by a coma.</report>
+            <report test="tei:correspDesc/correspAction/tei:persName[not(matches(., '(.+),(.+)'))]"
+                role="ERROR">Incorrect format. The surname should go first and be separated by a
+                coma.</report>
+        </rule>
+    </pattern>
+
+    <pattern id="date">
+        <rule context="tei:date">
+            <report test="@notBefore-iso or @notAfter-iso" role="error">The attributes @notBefore-iso or @notAfter-iso are not allowed.</report>
         </rule>
     </pattern>
 
