@@ -20,27 +20,27 @@ along with ediarum.BASE.edit. If not, see <http://www.gnu.org/licenses/>.
 @namespace xml "http://www.w3.org/XML/1998/namespace";
 @namespace telota "http://www.telota.de";
 
-@font-face{
+@font-face {
     font-family: "BBAWfont";
-    src:url("../fonts/linlibertine_r.ttf");
+    src: url("../fonts/linlibertine_r.ttf");
     font-weight: normal;
     font-style: normal;
 }
 
-@font-face{
+@font-face {
     font-family: "BBAWfont-italic";
-    src:url("../fonts/linlibertine_ri.ttf");
+    src: url("../fonts/linlibertine_ri.ttf");
     font-weight: normal;
 }
 
-@font-face{
+@font-face {
     font-family: "Biolinum";
     src: url("../fonts/linbiolinum_r.ttf");
     font-weight: normal;
     font-style: normal;
 }
 
-@font-face{
+@font-face {
     font-family: "Biolinum-italic";
     src: url("../fonts/linbiolinum_ri.ttf");
     font-weight: normal;
@@ -73,20 +73,22 @@ titleStmt {
 }
 
 titleStmt title {
-    -oxy-placeholder-content: "Titel";
+    content: "${i18n(css.title.placeholder-content)} : ";
+    /* -oxy-placeholder-content: "Titel";*/
     -oxy-display-tags: none;
     font-size: 1.5em;
 }
 
 titleStmt title idno {
     padding: 0 0.5em 0 0;
-    -oxy-placeholder-content: "Briefnummer";
+    content: "${i18n(css.title.idno.placeholder-content)} : ";
+    /*-oxy-placeholder-content: "Briefnummer";*/
     -oxy-display-tags: none;
 }
 
 titleStmt title idno:after {
     content: ".";
-} 
+}
 
 titleStmt editor,
 titleStmt respStmt {
@@ -95,7 +97,8 @@ titleStmt respStmt {
 }
 
 editor:after {
-    content: "(Herausgeber)";
+    /* content: "(Herausgeber)";*/
+    content: "${i18n(css.editor-after.content)} : ";
 }
 
 respStmt resp,
@@ -117,7 +120,7 @@ titleStmt persName forename {
 }
 
 titleStmt surname:after {
-    content:",";
+    content: ",";
 }
 
 editionStmt {
@@ -139,7 +142,9 @@ sourceDesc:before {
 
 sourceDesc msDesc {
     display: block;
-    content: "Handschrift: ";
+    content: "${i18n(css.msDesc.content)} : ";
+    /*content: "Handschrift: ";*/
+
 }
 
 sourceDesc msDesc * {
@@ -148,45 +153,53 @@ sourceDesc msDesc * {
 
 sourceDesc msDesc institution:after,
 sourceDesc msDesc repository:after,
-sourceDesc msDesc collection:after{
+sourceDesc msDesc collection:after {
     content: " / ";
 }
 
-sourceDesc msDesc[rend="copy"] {
-    content: "Abschrift: ";
+sourceDesc msDesc[rend = "copy"] {
+    content: "${i18n(css.msDesc-rend-copy.content)} : ";
+    /* content: "Abschrift: ";*/
 }
 
-sourceDesc msDesc[rend="concept"] {
-    content: "Entwurf: ";
+sourceDesc msDesc[rend = "concept"] {
+    content: "${i18n(css.msDesc-rend-concept.content)} : ";
+    /*content: "Entwurf: ";*/
 }
 
-sourceDesc msDesc[rend="print-as-print"] {
-    content: "Druck (als solcher): ";
+sourceDesc msDesc[rend = "print-as-print"] {
+    content: "${i18n(css.msDesc-rend-print-as-print.content)} : ";
+    /*content: "Druck (als solcher): ";*/
 }
 
-sourceDesc msDesc[rend="notExtant"] {
-    content: "Erschlossen";
+sourceDesc msDesc[rend = "notExtant"] {
+    content: "${i18n(css.msDesc-rend-not-extant.content)} : ";
+    /* content: "Erschlossen";*/
 }
 
-sourceDesc msDesc[rend="print"] {
-    content: "Nur Druckzeuge vorhanden.";
+sourceDesc msDesc[rend = "print"] {
+    content: "${i18n(css.msDesc-rend-print.content)} : ";
+    /*content: "Nur Druckzeuge vorhanden.";*/
 }
 
 sourceDesc msDesc idno {
-    -oxy-placeholder-content: "Signatur";
+    /* -oxy-placeholder-content: "Signatur";*/
+    content: "${i18n(css.msDesc.idno.placeholder-content)} : ";
 }
 
-sourceDesc msDesc idno[type='uri']:before {
+sourceDesc msDesc idno[type = 'uri']:before {
     content: "\A URI: ";
 }
 
 sourceDesc msDesc physDesc p {
     display: block;
-    -oxy-placeholder-content: "[Hier Papier, Format etc. eintragen]";
+    /*-oxy-placeholder-content: "[Hier Papier, Format etc. eintragen]";*/
+    content: "${i18n(css.msDesc.physDesc.p.placeholder-content)} : ";
 }
 
 sourceDesc msDesc physDesc:before {
-    content: "Handschriftenbeschreibung: ";
+    /* content: "Handschriftenbeschreibung: ";*/
+    content: "${i18n(css.msDesc.physDesc-before.content)} : ";
     font-style: normal;
     font-weight: bold;
 }
@@ -195,52 +208,54 @@ sourceDesc listWit witness {
     display: block;
 }
 
-sourceDesc witness msDesc[type='concept'] {
-    content: "Entwurf: ";
+sourceDesc witness msDesc[type = 'concept'] {
+   /* content: "Entwurf: ";*/
+   content:"${i18n(css.sourceDesc.witness.msDesc-concept)} : ";
 }
 
-sourceDesc witness msDesc[type='copy'] {
-    content: "Abschrift: ";
+sourceDesc witness msDesc[type = 'copy'] {
+   /* content: "Abschrift: ";*/
+   content:"${i18n(css.sourceDesc.witness.msDesc-copy)} : ";
 }
 
-sourceDesc witness>bibl {
+sourceDesc witness > bibl {
     content: "D: ";
     -oxy-display-tags: none;
 }
 
-sourceDesc witness:nth-child(2)>bibl {
+sourceDesc witness:nth-child(2) > bibl {
     content: "D2: ";
 }
 
-sourceDesc witness:nth-child(3)>bibl {
+sourceDesc witness:nth-child(3) > bibl {
     content: "D3: ";
 }
 
-sourceDesc witness:nth-child(4)>bibl {
+sourceDesc witness:nth-child(4) > bibl {
     content: "D4: ";
 }
 
-sourceDesc witness:nth-child(5)>bibl {
+sourceDesc witness:nth-child(5) > bibl {
     content: "D5: ";
 }
 
-sourceDesc witness:nth-child(6)>bibl {
+sourceDesc witness:nth-child(6) > bibl {
     content: "D6: ";
 }
 
-sourceDesc witness:nth-child(7)>bibl {
+sourceDesc witness:nth-child(7) > bibl {
     content: "D7: ";
 }
 
-sourceDesc witness:nth-child(8)>bibl {
+sourceDesc witness:nth-child(8) > bibl {
     content: "D8: ";
 }
 
-sourceDesc witness:nth-child(9)>bibl {
+sourceDesc witness:nth-child(9) > bibl {
     content: "D9: ";
 }
 
-sourceDesc witness[select='#this'] {
+sourceDesc witness[select = '#this'] {
     font-weight: bold;
 }
 
@@ -251,9 +266,10 @@ text {
 }
 
 profileDesc creation:empty {
-    -oxy-placeholder-content: '[Angaben zur Erstellung des Manuskripts über Menü "Allgemein" angeben]'; 
+    /*-oxy-placeholder-content: '[Angaben zur Erstellung des Manuskripts über Menü "Allgemein" angeben]';*/
+    content:"${i18n(css.profileDesc.creation-empty)} : ";
     display: block;
-} 
+}
 
 
 profileDesc creation date {
@@ -269,34 +285,38 @@ profileDesc correspAction placeName {
 }
 
 profileDesc creation date:before {
-    content: "Datum: "
+    /*content: "Datum: "*/
+    content:"${i18n(css.profileDesc.creation.date-before)} : ";
 }
 
 correspDesc date[when],
 profileDesc creation date[when] {
-    content: oxy_editor(type,datePicker,edit,'@when',format,'yyyy-MM-dd');
+    content: oxy_editor(type, datePicker, edit, '@when', format, 'yyyy-MM-dd');
     -oxy-display-tags: none;
 }
 
 correspDesc date[from],
 profileDesc creation date[from] {
-    content: oxy_editor(type,datePicker,edit,'@from',format,'yyyy-MM-dd') " bis " oxy_editor(type,datePicker,edit,'@to',format,'yyyy-MM-dd');
+    content: oxy_editor(type, datePicker, edit, '@from', format, 'yyyy-MM-dd') " bis " oxy_editor(type, datePicker, edit, '@to', format, 'yyyy-MM-dd');
     -oxy-display-tags: none;
 }
 
 correspDesc date[notBefore],
 profileDesc creation date[notBefore] {
-    content: "Nicht vor" oxy_editor(type,datePicker,edit,'@notBefore',format,'yyyy-MM-dd') " und nicht nach " oxy_editor(type,datePicker,edit,'@notAfter',format,'yyyy-MM-dd');
-    -oxy-display-tags: none;    
+   /* content: "Nicht vor" oxy_editor(type, datePicker, edit, '@notBefore', format, 'yyyy-MM-dd') " und nicht nach " oxy_editor(type, datePicker, edit, '@notAfter', format, 'yyyy-MM-dd');*/
+    content: "${i18n(css.date.notBefore)}:" oxy_editor(type, datePicker, edit, '@notBefore', format, 'yyyy-MM-dd') "${i18n(css.date.AND.notAfter)}:" oxy_editor(type, datePicker, edit, '@notAfter', format, 'yyyy-MM-dd');
+    -oxy-display-tags: none;
 }
 
 
 profileDesc creation persName:before {
-    content: "Ersteller: ";
+   /* content: "Ersteller: ";*/
+   content:"${i18n(css.profileDesc.creation.persName-before)} : ";
 }
 
 profileDesc creation placeName:before {
-    content: "Erstellungsort: ";
+    /*content: "Erstellungsort: ";*/
+    content:"${i18n(css.profileDesc.creation.placeName-before)} : ";
 }
 
 profileDesc creation persName:after,
@@ -319,13 +339,15 @@ profileDesc textClass {
 
 profileDesc abstract:before {
     display: block;
-    content: "Regest: ";
+    content:"${i18n(css.profileDesc.abstract-before)} : ";
+    /*content: "Regest: ";*/
     font-weight: bold;
 }
 
 profileDesc abstract p {
     display: block;
-    -oxy-placeholder-content: "[Regest hier eingeben]"
+   /* -oxy-placeholder-content: "[Regest hier eingeben]"*/
+   content:"${i18n(css.profileDesc.abstract.p)} : ";
 }
 
 
@@ -347,13 +369,15 @@ abstract quote:after {
 
 /* Anmerkungen zum Text */
 notesStmt note:before {
-    content: "Anmerkungen zum Text";
+    /*content: "Anmerkungen zum Text";*/
+    content:"${i18n(css.notesStmt.note-before)} : ";
     font-weight: bold;
 }
 
 notesStmt note p {
     display: block;
-    -oxy-placeholder-content: "[Text hier eingeben]";
+    content:"${i18n(css.notesStmt.note.p)} : ";
+    /*-oxy-placeholder-content: "[Text hier eingeben]";*/
 }
 
 notesStmt {
@@ -361,44 +385,52 @@ notesStmt {
     margin: 1em 0 1em 0;
     padding: 1em 0 1em 0;
     border-top: 1px solid silver;
-    border-bottom: 1px solid silver;   
+    border-bottom: 1px solid silver;
 }
 
 /* correspondence description */
 
-correspAction[type="sent"] {
+correspAction[type = "sent"] {
     display: block;
-    -oxy-placeholder-content: '[Absenderangaben über Menü "Briefmetadaten" eintragen]';
+    /*-oxy-placeholder-content: '[Absenderangaben über Menü "Briefmetadaten" eintragen]';*/
+    content:"${i18n(css.correspAction-sent)} : ";
 }
 
-correspAction[type="received"] {
+correspAction[type = "received"] {
     display: block;
-    -oxy-placeholder-content: '[Empfängerangaben über Menü "Briefmetadaten" eintragen]';
+   /* -oxy-placeholder-content: '[Empfängerangaben über Menü "Briefmetadaten" eintragen]';*/
+   content:"${i18n(css.correspAction-received)} : ";
 }
 
 
-correspAction[type='sent'] persName:before {
-    content: "Absender: ";
+correspAction[type = 'sent'] persName:before {
+    /*content: "Absender: ";*/
+    content:"${i18n(css.correspAction-sent.persName-before)} : ";
 }
 
-correspAction[type='received'] persName:before {
-    content: "Empfänger: ";
+correspAction[type = 'received'] persName:before {
+    /*content: "Empfänger: ";*/
+    content:"${i18n(css.correspAction-received.persName-before)} : ";
 }
 
-correspAction[type='sent'] placeName:before {
-    content: "Schreibort: ";
+correspAction[type = 'sent'] placeName:before {
+   /* content: "Schreibort: ";*/
+   content:"${i18n(css.correspAction-sent.placeName-before)} : ";
 }
 
-correspAction[type='received'] placeName:before {
-    content: "Empfangsort: ";
+correspAction[type = 'received'] placeName:before {
+    /*content: "Empfangsort: ";*/
+    content:"${i18n(css.correspAction-received.placeName-before)} : ";   
 }
 
-correspAction[type='sent'] date:before {
-    content: "Schreibdatum: ";
+correspAction[type = 'sent'] date:before {
+    /*content: "Schreibdatum: ";*/
+    content:"${i18n(css.correspAction-sent.date-before)} : ";
 }
 
-correspAction[type='received'] date:before {
-    content: "Empfangsdatum: ";
+correspAction[type = 'received'] date:before {
+   /* content: "Empfangsdatum: ";*/
+   content:"${i18n(css.correspAction-received.date-before)} : ";
 }
 
 correspContext ref {
@@ -410,22 +442,27 @@ correspContext ref[target] {
 }
 
 
-correspContext ref[type="prev"][target] {
-    content: "Vorangehender Brief";
+correspContext ref[type = "prev"][target] {
+    /*content: "Vorangehender Brief";*/
+    content:"${i18n(css.correspContext.ref-prev)} : ";
 }
 
-correspContext ref[type="next"][target] {
-    content: "Nachfolgender Brief";
+correspContext ref[type = "next"][target] {
+   /* content: "Nachfolgender Brief";*/
+   content:"${i18n(css.correspContext.ref-next)} : ";
+
 }
 
-correspContext ref[type="prev"],
-correspContext ref[type="prev"][target^="http://"] {
-    content: "Vorangehender Brief: ";
+correspContext ref[type = "prev"],
+correspContext ref[type = "prev"][target ^= "http://"] {
+    /*content: "Vorangehender Brief: ";*/
+     content:"${i18n(css.correspContext.ref-prev)} : ";
 }
 
-correspContext ref[type="next"],
-correspContext ref[type="next"][target^="http://"] {
-    content: "Nachfolgender Brief: ";
+correspContext ref[type = "next"],
+correspContext ref[type = "next"][target ^= "http://"] {
+   /* content: "Nachfolgender Brief: ";*/
+   content:"${i18n(css.correspContext.ref-next)} : ";
 }
 
 correspContext ref[target]:after {
@@ -433,7 +470,7 @@ correspContext ref[target]:after {
     link: oxy_url('${ediarum_website_base}', '${ediarum_website_path}${ediarum_website_letter}') "?id=" attr(target);
 }
 
-correspContext ref[target^="http://"]:after {
+correspContext ref[target ^= "http://"]:after {
     content: " " url('gfx/link.png');
     link: attr(target);
 }
@@ -441,13 +478,15 @@ correspContext ref[target^="http://"]:after {
 /* Anmerkungen zum Brief */
 correspDesc note:before:first-of-type {
     display: block;
-    content: "Anmerkungen zum Brief:";
+   /* content: "Anmerkungen zum Brief:";*/
+   content:"${i18n(css.correspDesc.note-before-first-of-type)} : ";
     font-weight: bold;
 }
 
 correspDesc note {
     display: block;
-    -oxy-placeholder-content: "[Hier Anmerkungen zum Brief oder zur Datierung eingeben]";
+   /* -oxy-placeholder-content: "[Hier Anmerkungen zum Brief oder zur Datierung eingeben]";*/
+   content:"${i18n(css.correspDesc.note)} : ";
     -oxy-show-placeholder: always;
 }
 
@@ -457,14 +496,16 @@ correspDesc note:not(:first-of-type) {
     padding: 0;
 }
 
-msDesc[rend="notExtant"] msIdentifier {
+msDesc[rend = "notExtant"] msIdentifier {
     display: none;
 }
 
-text body div[type="regestOnly"] {
+text body div[type = "regestOnly"] {
     display: block;
     -oxy-editable: false;
-    content: "[Kein Text, nur Regest möglich]";
+   /* content: "[Kein Text, nur Regest möglich]";*/
+   content:"${i18n(css.text.body.div-regestOnly)} : ";
+
 }
 
 /* ############## text ################# */
@@ -481,42 +522,43 @@ text head {
     margin: 0 0 1em 0;
 }
 
-text head[type="h1"] {
+text head[type = "h1"] {
     font-size: 1.4em;
     font-weight: bold;
 }
 
-text head[type="h2"] {
+text head[type = "h2"] {
     font-size: 1.2em;
     font-weight: bold;
 }
 
-text head[type="h3"] {
+text head[type = "h3"] {
     font-size: 1.2em;
 }
 
-text p, 
-text lg[type="verse"] {
+text p,
+text lg[type = "verse"] {
     display: block;
     margin: 0 0 1em 0;
 }
 
-text p[rend="align(center)"]{
+text p[rend = "align(center)"] {
     text-align: center;
 }
 
-text p[rendition="#mMM"] {
+text p[rendition = "#mMM"] {
     border-left: 3px solid black;
     padding-left: 0.5em;
 }
 
-text p[rendition="#et"], text list[rendition="#et"] {
+text p[rendition = "#et"],
+text list[rendition = "#et"] {
     padding-left: 3em;
 }
 
 text lb {
     display: inline;
-    -oxy-display-tags: none;            
+    -oxy-display-tags: none;
 }
 
 text lb:before {
@@ -524,7 +566,7 @@ text lb:before {
     white-space: pre-line;
 }
 
-text g[ref="#typoHyphen"] {
+text g[ref = "#typoHyphen"] {
     content: "-";
     -oxy-display-tags: none;
 }
@@ -543,7 +585,7 @@ text list item {
 }
 
 text list {
-    margin: 1em 0 0 1em;    
+    margin: 1em 0 0 1em;
 }
 
 text space {
@@ -589,7 +631,7 @@ text pb[facs]:after {
 fw {
     font-style: italic;
     color: gray;
-    -oxy-display-tags: none; 
+    -oxy-display-tags: none;
 }
 
 fw:before {
@@ -606,33 +648,38 @@ text figure {
     display: block;
     margin: 0 0 0 2em;
     -oxy-display-tags: none;
-    -oxy-placeholder-content: "[Zeichnung o.ä.]";
+   /* -oxy-placeholder-content: "[Zeichnung o.ä.]";*/
+   content:"${i18n(css.text.figure)} : ";
 }
 
 text figure[facs] {
-    content: url(oxy_base-uri()'${ediarum_projects_directory}${ediarum_project_name}/data/${ediarum_image_directory}/' attr(facs));
+    content: url(oxy_base-uri() '${ediarum_projects_directory}${ediarum_project_name}/data/${ediarum_image_directory}/' attr(facs));
     width: 250px;
 }
 
 text figure head {
     -oxy-display-tags: none;
-    -oxy-placeholder-content: "[Überschrift der Abbildung]";
+    /*-oxy-placeholder-content: "[Überschrift der Abbildung]";*/
+    content:"${i18n(css.text.figure.head)} : ";
 }
 
 text figure figDesc {
     display: block;
     font-style: italic;
-    -oxy-placeholder-content: "[Bildbeschreibung durch den Bearbeiter]"
+    /*-oxy-placeholder-content: "[Bildbeschreibung durch den Bearbeiter]"*/
+    content:"${i18n(css.text.figure.figDesc)} : ";
 }
 
 text figure p {
-    -oxy-placeholder-content: "[Bildunterschrift des Autors]"
+    /*-oxy-placeholder-content: "[Bildunterschrift des Autors]"*/
+    content:"${i18n(css.text.figure.p)} : ";
 }
 
 text figure note {
     display: block;
     font-style: italic;
-    -oxy-placeholder-content: "[Sacherläuterung zur Zeichnung bzw. Abbildung]"
+    /*-oxy-placeholder-content: "[Sacherläuterung zur Zeichnung bzw. Abbildung]"*/
+    content:"${i18n(css.text.figure.note)} : ";
 }
 
 /*  graphic DEPRECATED */
@@ -645,14 +692,15 @@ text graphic {
 text note {
     background-color: #e0e0e0;
     -oxy-display-tags: none;
-    -oxy-placeholder-content: "[Anmerkung eingeben]";
+   /* -oxy-placeholder-content: "[Anmerkung eingeben]";*/
+   content:"${i18n(css.text.note)} : ";
     -oxy-show-placeholder: always;
 }
 
 
 
-text note[hand='#author']:after,
-text note[hand='#addressee']:after {
+text note[hand = '#author']:after,
+text note[hand = '#addressee']:after {
     content: none;
     link: none;
 }
@@ -662,7 +710,7 @@ text note:has(p) {
     margin-left: 1em;
 }
 
-text note p { 
+text note p {
     display: block;
 }
 
@@ -672,12 +720,12 @@ text metamark {
     -oxy-display-tags: none;
 }
 
-metamark[function="used"] {
+metamark[function = "used"] {
     content: url('gfx/metamark_used_start.png');
     -oxy-display-tags: none;
 }
 
-anchor[type="used"] {
+anchor[type = "used"] {
     content: url('gfx/metamark_used_stop.png');
     -oxy-display-tags: none;
 }
@@ -691,7 +739,8 @@ milestone {
 /* Correspondence */
 dateline {
     display: block;
-    -oxy-placeholder-content: "[Datumszeile]";
+    /*-oxy-placeholder-content: "[Datumszeile]";*/
+    content:"${i18n(css.dateline)} : ";
 }
 
 opener dateline {
@@ -700,63 +749,67 @@ opener dateline {
 
 opener salute {
     display: block;
-    -oxy-placeholder-content: "[Anrede]";
+    /*-oxy-placeholder-content: "[Anrede]";*/
+    content:"${i18n(css.opener.dateline)} : ";
+    
 }
 
 closer salute {
     display: block;
-    -oxy-placeholder-content: "[Gruß]";
+    /*-oxy-placeholder-content: "[Gruß]";*/
+    content:"${i18n(css.opener.salute)} : ";
 }
 
 signed {
     display: block;
-    -oxy-placeholder-content: "[Unterschrift]";
+    /*-oxy-placeholder-content: "[Unterschrift]";*/
+    content:"${i18n(css.closer.salute)} : ";
 }
 
 /* Tables  */
 
 text table {
-  display: table;
-  margin: 1em 0 1em 0;
+    display: table;
+    margin: 1em 0 1em 0;
 }
-text table > head{
-    display:table-caption;
+text table > head {
+    display: table-caption;
     font-family: "BBAWfont-italic";
     margin-bottom: 6pt;
 }
 
 text row {
-  display: table-row;
+    display: table-row;
 }
-text row[role='label'] {
-   color: inherit;
-   background-color: #aaa;
-   font-weight: bold;
+text row[role = 'label'] {
+    color: inherit;
+    background-color: #aaa;
+    font-weight: bold;
 }
 
 text cell {
-  display: table-cell;
-  border: 1px dashed silver;
-  padding: 3px;
-  color: inherit;
-  background-color:inherit;
+    display: table-cell;
+    border: 1px dashed silver;
+    padding: 3px;
+    color: inherit;
+    background-color: inherit;
 }
 
-text table[rend='drawn'] cell {
+text table[rend = 'drawn'] cell {
     border: 1px solid silver;
 }
 
-text cell[rendition='#right'] {
+text cell[rendition = '#right'] {
     text-align: right;
 }
 
-text cell[rendition='#c'] {
+text cell[rendition = '#c'] {
     text-align: center;
 }
 
-text cell[role='label'] {
-   color: inherit;
-   background-color: #bbb;
+text cell[role = 'label'] {
+    color: inherit;
+    background-color: #bbb;
 }
 
 /* Authors editing */
@@ -778,60 +831,61 @@ quote add,
 text add {
     color: green;
     -oxy-display-tags: none;
-    -oxy-placeholder-content: "[Hinzufügung]"
+    content:"${i18n(css.quote.add)} : ";
+   /* -oxy-placeholder-content: "[Hinzufügung]"*/
 }
 
-quote hi[rendition="#u"],
-text hi[rendition="#u"] {
+quote hi[rendition = "#u"],
+text hi[rendition = "#u"] {
     text-decoration: underline;
     -oxy-display-tags: none;
 }
 
-quote hi[rendition="#uu"],
-text hi[rendition="#uu"] {
+quote hi[rendition = "#uu"],
+text hi[rendition = "#uu"] {
     border-bottom: 1px solid #000;
-    text-decoration:underline;
+    text-decoration: underline;
     -oxy-display-tags: none;
 }
 
-quote del hi[rendition="#u"],
-text del hi[rendition="#u"],
-quote hi[rendition="#u"] del,
-text hi[rendition="#u"] del,
-quote del hi[rendition="#uu"],
-text del hi[rendition="#uu"],
-quote hi[rendition="#uu"] del,
-text hi[rendition="#uu"] del {
+quote del hi[rendition = "#u"],
+text del hi[rendition = "#u"],
+quote hi[rendition = "#u"] del,
+text hi[rendition = "#u"] del,
+quote del hi[rendition = "#uu"],
+text del hi[rendition = "#uu"],
+quote hi[rendition = "#uu"] del,
+text hi[rendition = "#uu"] del {
     text-decoration: line-through underline;
 }
 
-text hi[rendition="#mMM"] {
+text hi[rendition = "#mMM"] {
     border-left: 3px solid #000;
     border-right: 3px solid #000;
     -oxy-display-tags: none;
 }
 
-hi[rendition="#sup"],
-g[rendition="#sup"] {
-    position: relative; 
+hi[rendition = "#sup"],
+g[rendition = "#sup"] {
+    position: relative;
     top: -0.5em;
     font-size: 0.7em;
     -oxy-display-tags: none;
 }
 
-quote hi[rendition="#i"],
-text hi[rendition="#i"] {
+quote hi[rendition = "#i"],
+text hi[rendition = "#i"] {
     font-style: italic;
     -oxy-display-tags: none;
 }
 
-quote hi[rendition="#g"],
-text hi[rendition="#g"] {
-    letter-spacing:0.125em;
+quote hi[rendition = "#g"],
+text hi[rendition = "#g"] {
+    letter-spacing: 0.125em;
     -oxy-display-tags: none;
 }
 
-head[rendition='#c'] {
+head[rendition = '#c'] {
     text-align: center;
 }
 
@@ -840,11 +894,11 @@ quote supplied,
 text supplied {
     font-family: "BBAWfont-italic";
     background-color: #e0e0e0;
-    -oxy-display-tags: none;    
+    -oxy-display-tags: none;
 }
 
 quote supplied:before,
-text supplied:before  {
+text supplied:before {
     content: "[";
     font-style: normal;
 }
@@ -856,8 +910,9 @@ text supplied:after {
 }
 
 
-text supplied[cert="low"]:before {
-    content: "zu ergänzen wohl [";
+text supplied[cert = "low"]:before {
+    /*content: "zu ergänzen wohl [";*/
+    content:"${i18n(css.text.supplied-low-before)} : ";
     font-family: "BBAWfont-italic";
     color: gray;
 }
@@ -892,17 +947,20 @@ text choice expan {
     font-style: italic;
     background-color: #E8FFDD;
     -oxy-display-tags: none;
-    -oxy-placeholder-content: "[Normalisierte Schreibung]";
+    /*-oxy-placeholder-content: "[Normalisierte Schreibung]";*/
+    content:"${i18n(css.norm-spelling)} : ";
 }
 
 quote choice corr,
 text choice corr {
-    -oxy-placeholder-content: "[Korrigierte Schreibung]";
+    /*-oxy-placeholder-content: "[Korrigierte Schreibung]";*/
+    content:"${i18n(css.revised-spelling)} : ";
 }
 
-quote corr[type="deleted"],
-text corr[type="deleted"] {
-    content: "[gelöscht]";
+quote corr[type = "deleted"],
+text corr[type = "deleted"] {
+    /*content: "[gelöscht]";*/
+    content:"${i18n(css.corr-deleted)} : ";
     font-style: italic;
     color: green;
 }
@@ -916,7 +974,8 @@ text choice abbr {
 quote choice expan,
 text choice expan {
     background-color: #E8FFDD;
-    -oxy-placeholder-content: "[Aufgelöste Schreibung]";
+   /* -oxy-placeholder-content: "[Aufgelöste Schreibung]";*/
+   content:"${i18n(css.choice.expan)} : ";
 }
 
 quote gap,
@@ -946,7 +1005,8 @@ text damage {
 
 text damage:empty {
     -oxy-display-tags: none;
-    content: "Schadhafte Stelle";
+    /*content: "Schadhafte Stelle";*/
+    content:"${i18n(css.text.damage-empty)} : ";
 }
 
 text damage:before {
@@ -970,19 +1030,19 @@ text foreign {
     background-color: #e0e0e0;
 }
 
-text hi[rendition="#aq"] {
+text hi[rendition = "#aq"] {
     font-family: Biolinum;
     -oxy-display-tags: none;
 }
 
 /* Vorgedruckte Textteile */
-hi[rendition='#mPrint'] {
+hi[rendition = '#mPrint'] {
     -oxy-display-tags: none;
 }
 
-hi[rendition='#mPrint'],
-p[rendition='#mPrint'],
-address[rendition='#mPrint'] {
+hi[rendition = '#mPrint'],
+p[rendition = '#mPrint'],
+address[rendition = '#mPrint'] {
     font-family: "Biolinum", Helvetica, Arial, Sans;
 }
 
@@ -1002,29 +1062,32 @@ text seg orig {
 
 abstract seg note,
 text seg note,
-text note[type="sachapparat"] {
+text note[type = "sachapparat"] {
     padding-left: 0.5em;
     font-family: "BBAWfont-italic";
     color: #423E2C;
     background-color: #D6D2C2;
-    -oxy-placeholder-content: "[Sachanmerkung hier eingeben]";
+    /*-oxy-placeholder-content: "[Sachanmerkung hier eingeben]";*/
+    content:"${i18n(css.note-annotation)} : ";
     -oxy-display-tags: none;
 }
 
-text note[type="sachapparat"] {
+text note[type = "sachapparat"] {
     display: block;
     margin: 0 0 2em 0;
-    padding: 0;    
+    padding: 0;
 }
 
-text seg[type="textapparat"] note {
-    -oxy-placeholder-content: "[Textanmerkung hier eingeben]";
+text seg[type = "textapparat"] note {
+    /*-oxy-placeholder-content: "[Textanmerkung hier eingeben]";*/
+    content:"${i18n(css.note-text)} : ";
     -oxy-display-tags: none;
 }
 
-text anchor[type="sachapparat"] {
+text anchor[type = "sachapparat"] {
     display: block;
-    content: "Sachanmerkung: Start des Bezugstextes";
+    /*content: "Sachanmerkung: Start des Bezugstextes";*/
+    content:"${i18n(css.anchor-annotation)} : ";
     color: #423E2C;
     background-color: #D6D2C2;
     -oxy-display-tags: none;
@@ -1045,14 +1108,14 @@ text index:before {
     content: url('gfx/index_start.png');
 }
 
-abstract anchor[type="index"],
-text anchor[type="index"] {
-    -oxy-display-tags: none;    
+abstract anchor[type = "index"],
+text anchor[type = "index"] {
+    -oxy-display-tags: none;
     line-height: 0.8em;
 }
 
-abstract anchor[type="index"]:after,
-text anchor[type="index"]:after {
+abstract anchor[type = "index"]:after,
+text anchor[type = "index"]:after {
     content: url('gfx/index_end.png');
 }
 
@@ -1067,14 +1130,14 @@ persName,
 orgName,
 placeName,
 bibl,
-rs[type='person'],
-rs[type='org'],
-rs[type='place'],
-rs[type='bibl'],
-rs[type='term'] {
+rs[type = 'person'],
+rs[type = 'org'],
+rs[type = 'place'],
+rs[type = 'bibl'],
+rs[type = 'term'] {
     color: #465E7A;
     -oxy-display-tags: none;
-} 
+}
 
 witness bibl {
     color: black;
@@ -1103,15 +1166,15 @@ correspDesc note ref {
     border-bottom: 1px dashed #00C6FF;
 }
 
-text anchor[type="verweisziel"] {
+text anchor[type = "verweisziel"] {
     -oxy-display-tags: none;
 }
 
-text anchor[xml|id^="start"]:after {
+text anchor[xml|id ^= "start"]:after {
     content: url('gfx/link_target_start.png');
 }
 
-text anchor[xml|id^="stop"]:before {
+text anchor[xml|id ^= "stop"]:before {
     content: url('gfx/link_target_stop.png');
 }
 
@@ -1122,7 +1185,8 @@ facsimile {
 }
 facsimile:before {
     display: block;
-    content: "Digitalisate";
+    /*content: "Digitalisate";*/
+    content:"${i18n(css.facsimile-before)} : ";
     font-weight: bold;
 }
 
@@ -1133,18 +1197,21 @@ addrLine {
 
 address:before {
     display: block;
-    content: "Adresse:";
+   /* content: "Adresse:";*/
+   content:"${i18n(css.address-before)} : ";
     font-style: italic;
 }
 
 addrLine {
-    -oxy-placeholder-content: "[Adresszeile]";
+    /*-oxy-placeholder-content: "[Adresszeile]";*/
+    content:"${i18n(css.addrLine)} : ";
 }
 
 /* Keywords */
 
 profileDesc textClass:before {
-    content: "Schlagwörter/Themen: ";
+   /* content: "Schlagwörter/Themen: ";*/
+   content:"${i18n(css.profileDesc.textClass-before)} : ";
     font-style: normal;
     font-weight: normal;
 }
@@ -1167,97 +1234,100 @@ profileDesc textClass keywords term:last-of-type:after {
 /* revisionDesc */
 
 revisionDesc listChange {
--oxy-foldable : true ;
--oxy-folded : true ;
+    -oxy-foldable: true;
+    -oxy-folded: true;
 
 }
 
 revisionDesc change {
-display : block ;
-margin-top : 0.4em ;
-margin-right : 0 ;
-margin-bottom : 0 ;
-margin-left : 0 ;
-border-bottom-width : 1px ;
-border-bottom-style : solid ;
-border-bottom-color : rgb(127 , 157 , 185) ;
-border-left-width : 1px ;
-border-left-style : solid ;
-border-left-color : rgb(127 , 157 , 185) ;
-border-right-width : 1px ;
-border-right-style : solid ;
-border-right-color : rgb(127 , 157 , 185) ;
-border-top-width : 1px ;
-border-top-style : solid ;
-border-top-color : rgb(127 , 157 , 185) ;
-padding-top : 0.4em ;
-padding-right : 0.4em ;
-padding-left : 0.4em ;
-padding-bottom : 0.4em ;
-background-color : white ;
-max-width : 50rem ;
--oxy-display-tags : none ;
+    display: block;
+    margin-top: 0.4em;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(127, 157, 185);
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: rgb(127, 157, 185);
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: rgb(127, 157, 185);
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(127, 157, 185);
+    padding-top: 0.4em;
+    padding-right: 0.4em;
+    padding-left: 0.4em;
+    padding-bottom: 0.4em;
+    background-color: white;
+    max-width: 50rem;
+    -oxy-display-tags: none;
 
-line-height : 1.4 ;
--oxy-show-placeholder : always ;
--oxy-placeholder-content : "[Kommentar zur Änderung eingeben]" ;
+    line-height: 1.4;
+    -oxy-show-placeholder: always;
+    /*-oxy-placeholder-content: "[Kommentar zur Änderung eingeben]";*/
+    content:"${i18n(css.revisionDesc.change)} : ";
 }
 
 
-revisionDesc[status='draft']:before {
-        content:
-        "Status: " url('gfx/status_draft.gif')
-    }
-    
-revisionDesc[status='final']:before {
-        content:
-        "Status: " url('gfx/status_final.gif')
-         }
- revisionDesc {
-        display: block;
-        margin: 1em 0 0.5em 0;
-         color : rgb(70 , 94 , 122) ;
-    }
- 
+revisionDesc[status = 'draft']:before {
+    content: 
+    /*"Status: "*/ "${i18n(css.revisionDesc.status)} : " url('gfx/status_draft.gif')
+}
+
+revisionDesc[status = 'final']:before {
+    content: 
+    /*"Status: "*/ "${i18n(css.revisionDesc.status)} : " url('gfx/status_final.gif')
+}
+revisionDesc {
+    display: block;
+    margin: 1em 0 0.5em 0;
+    color: rgb(70, 94, 122);
+}
+
 revisionDesc:after {
-        content: oxy_editor(type,button,actionID,revisionDesc);
-    }
+    content: oxy_editor(type, button, actionID, revisionDesc);
+}
 
 
 revisionDesc listChange:before {
-                display: block;
-               margin: 1em 0 0.5em 0;
-               font-family : "BBAWfont-italic" ;     
-               
-               color : rgb(70 , 94 , 122) ;
-    	content: "Bearbeitungshistorie";
-    	margin: 0.5em 0 0 0;
-    	
-    }
-    
-revisionDesc listChange{  
+    display: block;
+    margin: 1em 0 0.5em 0;
+    font-family: "BBAWfont-italic";
+
+    color: rgb(70, 94, 122);
+    /*content: "Bearbeitungshistorie";*/
+    content:"${i18n(css.revisionDesc.listChange-before)} : ";
+    margin: 0.5em 0 0 0;
+
+}
+
+revisionDesc listChange {
     -oxy-foldable: true;
-	-oxy-folded: true;
-	
-  }
+    -oxy-folded: true;
+
+}
 
 revisionDesc change {
     -oxy-show-placeholder: always;
-    -oxy-placeholder-content: "[Kommentar zur Änderung eingeben]";
-    }
-revisionDesc change:before {
-    	content: oxy_editor(type,datePicker,edit,'@when',format,'yyyy-MM-dd');
-    }
- revisionDesc change[who]:before {
-    	content: oxy_editor(type,datePicker,edit,'@when',format,'yyyy-MM-dd')
-        	     " von " oxy_editor(type,text,edit,'@who',columns,10) " ";
-    }
+    /*-oxy-placeholder-content: "[Kommentar zur Änderung eingeben]";*/
+    content:"${i18n(css.revisionDesc.change)} : ";
     
+}
+revisionDesc change:before {
+    content: oxy_editor(type, datePicker, edit, '@when', format, 'yyyy-MM-dd');
+}
+revisionDesc change[who]:before {
+    content: oxy_editor(type, datePicker, edit, '@when', format, 'yyyy-MM-dd')
+ /*" von "*/ "${i18n(css.revisionDesc.change-before)} : " oxy_editor(type, text, edit, '@who', columns, 10) " ";
+}
+
 /* PROHD customization */
 
 /* encodingDesc */
 
-encodingDesc{
-      display: none;
+encodingDesc {
+    display: none;
 }
-   

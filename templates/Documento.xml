@@ -5,13 +5,16 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>${ask('Introducir título de la edición', generic, '')}</title>
+                <title type="main">${ask('Introducir título de la edición digital', generic, '')}</title>
+                <funder ref="https://www.auswaertiges-amt.de/de/">Auswärtiges Amt</funder>
+                <funder ref="https://www.fritz-thyssen-stiftung.de/">Fritz Thyssen Stiftung</funder>
+                <funder ref="https://www.gerda-henkel-stiftung.de/">Gerda Henkel Stiftung</funder>
             </titleStmt>
             <editionStmt>
                 <p>Primera edición de Proyecto Humboldt digital ProHD (<date>${ask('Año de la edición', generic, '')}</date>).</p>
             </editionStmt>
             <publicationStmt>
-                <publisher>${ask('Institución que publica la obra', generic, '')}</publisher>
+                <publisher>${ask('Institución que publica la edición digital', combobox, ('Berlin-Brandenburgische Akademie der Wissenschaften':'BBAW';'Oficina del Historiador de la Ciudad de la Habana':'OHCH'))}</publisher>
                 <availability status="free">
                     <licence target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Atribución 4.0 Internacional (CC BY 4.0) </licence>
                 </availability>
