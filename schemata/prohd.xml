@@ -51,10 +51,11 @@
         <!-- graphic can be also in text -->
         <elementSpec ident="graphic" mode="change">
           <attList>
-            <attDef ident="url" usage="opt" mode="replace"/>
-            <attDef ident="facs" usage="opt" mode="replace"/>
-            <attDef ident="hand" usage="opt" mode="replace">
-              <valList type="semi" mode="replace">
+            <!-- This change is right because in the TEI defaul model @url is required -->
+            <attDef ident="url" usage="opt" mode="change"/>
+            <!-- This is actually an addition because this element does not admit @hand in the TEI default model -->
+            <attDef ident="hand" usage="opt" mode="add">
+              <valList type="semi">
                 <valItem ident="#author"/>
                 <valItem ident="#addressee"/>
                 <valItem ident="#unknown"/>
@@ -64,7 +65,7 @@
         </elementSpec>
         <elementSpec ident="idno" mode="change">
           <attList>
-            <attDef ident="type" mode="replace" usage="opt">
+            <attDef ident="type" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="uri"/>
                 <valItem ident="URLImages"/>
@@ -76,7 +77,7 @@
         </elementSpec>
         <elementSpec ident="bibl" mode="change">
           <attList>
-            <attDef ident="type" usage="opt" mode="replace">
+            <attDef ident="type" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="print"/>
               </valList>
@@ -85,13 +86,13 @@
         </elementSpec>
         <elementSpec ident="change" mode="change">
           <attList>
-            <attDef ident="when" usage="req" mode="replace"/>
-            <attDef ident="who" usage="req" mode="replace"/>
+            <attDef ident="when" usage="req" mode="change"/>
+            <attDef ident="who" usage="req" mode="change"/>
           </attList>
         </elementSpec>
         <elementSpec ident="correspAction" mode="change">
           <attList>
-            <attDef ident="type" usage="req" mode="replace">
+            <attDef ident="type" usage="req" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="sent"/>
                 <valItem ident="received"/>
@@ -101,19 +102,13 @@
         </elementSpec>
         <elementSpec ident="date" mode="change">
           <attList>
-            <!-- doubt: is this necessary? -->
-            <attDef ident="when" usage="opt" mode="replace"/>
-            <attDef ident="from" usage="opt" mode="replace"/>
-            <attDef ident="to" usage="opt" mode="replace"/>
-            <attDef ident="notBefore" usage="opt" mode="replace"/>
-            <attDef ident="notAfter" usage="opt" mode="replace"/>
-            <attDef ident="cert" usage="opt" mode="replace">
+            <attDef ident="cert" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="high"/>
                 <valItem ident="low"/>
               </valList>
             </attDef>
-            <attDef ident="calendar" usage="opt" mode="replace">
+            <attDef ident="calendar" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="#Julian"/>
                 <valItem ident="#Gregorian"/>
@@ -123,8 +118,7 @@
         </elementSpec>
         <elementSpec ident="msDesc" mode="change">
           <attList>
-            <attDef ident="type" usage="opt" mode="replace"/>
-            <attDef ident="rend" usage="req" mode="replace">
+            <attDef ident="rend" usage="req" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="print"/>
                 <valItem ident="copy"/>
@@ -133,7 +127,7 @@
                 <valItem ident="notExtant"/>
               </valList>
             </attDef>
-            <attDef ident="select" usage="opt" mode="replace">
+            <attDef ident="select" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="#this"/>
               </valList>
@@ -142,13 +136,13 @@
         </elementSpec>
         <elementSpec ident="note" mode="change">
           <attList>
-            <attDef ident="type" usage="opt" mode="replace">
+            <attDef ident="type" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="editorial"/>
                 <valItem ident="remarkResponsibility"/>
               </valList>
             </attDef>
-            <attDef ident="place" usage="opt" mode="replace">
+            <attDef ident="place" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="left"/>
                 <valItem ident="right"/>
@@ -157,7 +151,7 @@
                 <valItem ident="inline"/>
               </valList>
             </attDef>
-            <attDef ident="hand" usage="opt" mode="replace">
+            <attDef ident="hand" mode="change">
               <valList type="open" mode="replace">
                 <valItem ident="#author"/>
                 <valItem ident="#addressee"/>
@@ -167,26 +161,21 @@
           </attList>
         </elementSpec>
         <!-- doubt: is this necessary? -->
-        <elementSpec ident="persName" mode="change">
-          <attList>
-            <attDef ident="key" usage="opt" mode="replace"/>
-            <attDef ident="ref" usage="opt" mode="replace"/>
-          </attList>
-        </elementSpec>
+        <!--<elementSpec ident="persName" mode="change"/>-->
         <elementSpec ident="placeName" mode="change">
           <attList>
-            <attDef ident="key" usage="req" mode="replace"/>
+            <attDef ident="key" usage="req" mode="change"/>
           </attList>
         </elementSpec>
         <elementSpec ident="orgName" mode="change">
           <attList>
-            <attDef ident="key" usage="req" mode="replace"/>
+            <attDef ident="key" usage="req" mode="change"/>
           </attList>
         </elementSpec>
         <elementSpec ident="quote" mode="change">
           <attList>
-            <attDef ident="rendition" usage="req" mode="replace">
-              <valList>
+            <attDef ident="rendition" usage="req" mode="change">
+              <valList type="closed" mode="replace">
                 <valItem ident="#u"/>
               </valList>
             </attDef>
@@ -194,7 +183,7 @@
         </elementSpec>
         <elementSpec ident="ref" mode="change">
           <attList>
-            <attDef ident="type" usage="opt" mode="replace">
+            <attDef ident="type" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="hasAttachment"/>
                 <valItem ident="attachedTo"/>
@@ -202,12 +191,12 @@
                 <valItem ident="previous"/>
               </valList>
             </attDef>
-            <attDef ident="target" usage="req" mode="replace"/>
+            <attDef ident="target" usage="req" mode="change"/>
           </attList>
         </elementSpec>
         <elementSpec ident="revisionDesc" mode="change">
           <attList>
-            <attDef ident="status" usage="req" mode="replace"/>
+            <attDef ident="status" usage="req" mode="change"/>
           </attList>
         </elementSpec>
 
@@ -223,22 +212,17 @@
         <!-- elements in text -->
         <elementSpec ident="lb" mode="change">
           <attList>
-            <attDef ident="break" usage="opt" mode="replace">
+            <attDef ident="break" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="no"/>
               </valList>
             </attDef>
           </attList>
         </elementSpec>
-        <elementSpec ident="pb" mode="change">
-          <attList>
-            <attDef ident="n" usage="rec" mode="replace"/>
-            <attDef ident="facs" usage="opt" mode="replace"/>
-          </attList>
-        </elementSpec>
+        <!--<elementSpec ident="pb" mode="change"/>-->
         <elementSpec ident="fw" mode="change">
           <attList>
-            <attDef ident="type" usage="req" mode="replace">
+            <attDef ident="type" usage="req" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="folNum"/>
               </valList>
@@ -247,19 +231,19 @@
         </elementSpec>
         <elementSpec ident="space" mode="change">
           <attList>
-            <attDef ident="unit" usage="req" mode="replace">
+            <attDef ident="unit" usage="req" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="lines"/>
                 <valItem ident="chars"/>
                 <valItem ident="words"/>
               </valList>
             </attDef>
-            <attDef ident="quantity" usage="req" mode="replace"/>
+            <attDef ident="quantity" usage="req" mode="change"/>
           </attList>
         </elementSpec>
         <elementSpec ident="g" mode="change">
           <attList>
-            <attDef ident="ref" usage="req" mode="replace">
+            <attDef ident="ref" usage="req" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="#typoHyphen"/>
               </valList>
@@ -268,14 +252,13 @@
         </elementSpec>
         <elementSpec ident="table" mode="change">
           <attList>
-            <attDef ident="rows" usage="req" mode="replace"/>
-            <attDef ident="cols" usage="req" mode="replace"/>
-            <!--            <attDef ident="rend" usage="req" mode="replace"/>-->
+            <attDef ident="rows" usage="req" mode="change"/>
+            <attDef ident="cols" usage="req" mode="change"/>
           </attList>
         </elementSpec>
         <elementSpec ident="row" mode="change">
           <attList>
-            <attDef ident="role" mode="replace">
+            <attDef ident="role" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="label"/>
               </valList>
@@ -284,7 +267,7 @@
         </elementSpec>
         <elementSpec ident="cell" mode="change">
           <attList>
-            <attDef ident="rendition" mode="replace">
+            <attDef ident="rendition" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="#right"/>
               </valList>
@@ -293,7 +276,7 @@
         </elementSpec>
         <elementSpec ident="hi" mode="change">
           <attList>
-            <attDef ident="rendition" usage="req" mode="replace">
+            <attDef ident="rendition" usage="req" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="#u"/>
                 <valItem ident="#uu"/>
@@ -305,7 +288,7 @@
         </elementSpec>
         <elementSpec ident="add" mode="change">
           <attList>
-            <attDef ident="place" usage="req" mode="replace">
+            <attDef ident="place" usage="req" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="superlinear"/>
                 <valItem ident="sublinear"/>
@@ -321,7 +304,7 @@
         </elementSpec>
         <elementSpec ident="del" mode="change">
           <attList>
-            <attDef ident="rendition" usage="req" mode="replace">
+            <attDef ident="rendition" usage="req" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="#ow"/>
                 <valItem ident="#s"/>
@@ -332,19 +315,19 @@
         </elementSpec>
         <elementSpec ident="figure" mode="change">
           <attList>
-            <attDef ident="facs" usage="req" mode="replace"/>
-            <attDef ident="hand" usage="req" mode="replace"/>
+            <attDef ident="facs" usage="req" mode="change"/>
+            <attDef ident="hand" usage="req" mode="change"/>
           </attList>
         </elementSpec>
         <elementSpec ident="unclear" mode="change">
           <attList>
-            <attDef ident="reason" usage="req" mode="replace">
+            <attDef ident="reason" usage="req" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="illegible"/>
                 <valItem ident="covered"/>
               </valList>
             </attDef>
-            <attDef ident="cert" usage="req" mode="replace">
+            <attDef ident="cert" usage="req" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="low"/>
                 <valItem ident="high"/>
@@ -354,7 +337,7 @@
         </elementSpec>
         <elementSpec ident="gap" mode="change">
           <attList>
-            <attDef ident="reason" usage="req" mode="replace">
+            <attDef ident="reason" usage="req" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="lost"/>
                 <valItem ident="illegible"/>
@@ -364,7 +347,7 @@
                 <valItem ident="insignificant"/>
               </valList>
             </attDef>
-            <attDef ident="unit" usage="req" mode="replace">
+            <attDef ident="unit" usage="req" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="chars"/>
                 <valItem ident="lines"/>
@@ -376,7 +359,7 @@
         </elementSpec>
         <elementSpec ident="supplied" mode="change">
           <attList>
-            <attDef ident="cert" usage="req" mode="replace">
+            <attDef ident="cert" usage="req" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="low"/>
                 <valItem ident="high"/>
@@ -387,7 +370,7 @@
         </elementSpec>
         <elementSpec ident="seg" mode="change">
           <attList>
-            <attDef ident="type" usage="req" mode="replace">
+            <attDef ident="type" usage="req" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="comment"/>
               </valList>
@@ -396,7 +379,7 @@
         </elementSpec>
         <elementSpec ident="anchor" mode="change">
           <attList>
-            <attDef ident="type" usage="req" mode="replace">
+            <attDef ident="type" usage="req" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="target"/>
                 <valItem ident="index"/>
@@ -406,7 +389,7 @@
         </elementSpec>
         <elementSpec ident="foreign" mode="change">
           <attList>
-            <attDef ident="xml:lang" usage="req" mode="replace">
+            <attDef ident="xml:lang" usage="req" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="grc"/>
                 <valItem ident="lat"/>
@@ -422,7 +405,7 @@
         </elementSpec>
         <elementSpec ident="rs" mode="change">
           <attList>
-            <attDef ident="type" usage="req" mode="replace">
+            <attDef ident="type" usage="req" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="term"/>
               </valList>
