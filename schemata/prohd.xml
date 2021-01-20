@@ -413,10 +413,6 @@
           </attList>
         </elementSpec>
 
-        <!-- to improve: 1. make sure usage="opt" is fine, if it does not change, delete; search //attDef[@usage="opt"]  -->
-        <!-- to improve: 2. delete non required attributes by using mode="delete" -->
-        <!-- For example <attDef ident="reason" mode="delete"/> inside attList -->
-
       </schemaSpec>
     </body>
   </text>
