@@ -335,8 +335,6 @@
         <rule context="tei:publicationStmt">
             <assert test="tei:publisher" role="ERROR">A &lt;publicationStmt&gt; element must contain
                 an &lt;publisher&gt; element.</assert>
-            <assert test="tei:pubPlace" role="ERROR">A &lt;publicationStmt&gt; element must contain
-                an &lt;pubPlace&gt; element after &lt;publisher&gt;.</assert>
             <assert test="tei:availability" role="ERROR">A &lt;publicationStmt&gt; element must
                 contain an &lt;availability&gt; element after &lt;pubPlace&gt;.</assert>
         </rule>
@@ -344,15 +342,8 @@
 
     <pattern id="publisher">
         <rule context="tei:publisher">
-            <assert test="tei:ref" role="ERROR">A &lt;publisher&gt; element must contain a
-                &lt;ref&gt; element.</assert>
-        </rule>
-    </pattern>
-
-    <pattern id="ref">
-        <rule context="tei:ref">
-            <assert test="text()" role="ERROR">A &lt;ref&gt; element must contain a some text inside
-                about the institution publishing the text.</assert>
+            <assert test="tei:ref or text()" role="ERROR">A &lt;publisher&gt; element must contain a
+                &lt;ref&gt; element or a text node with the name of the institution publishing the digital edition.</assert>
         </rule>
     </pattern>
 
