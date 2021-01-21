@@ -15,7 +15,7 @@
 # Infos zum Framework
 
 - Dieses Repository enthält die neueste öffentliche Version des *Frameworks* zur Redaktion des Projekts Humboldt Digital (ProHD).
-- Oxygen-XML-Editor *Framework* basierend auf [ediarum.BASE.edit] (https://www.ediarum.org/).
+- Oxygen-XML-Editor *Framework* basierend auf [ediarum.BASE.edit](https://www.ediarum.org/).
 - Entwicklung und Lokalisierung ins Spanische von Antonio Rojas Castro.
 - Ansprechpartner: antonio.rojas-castro[at]bbaw.de
 
