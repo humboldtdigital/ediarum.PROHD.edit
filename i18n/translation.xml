@@ -1829,11 +1829,11 @@
     </key>
     <key value="ask.margin_line">
         <val lang="de_DE">Am Rand angestrichen</val>
-        <val lang="es_ES">Subrayado al margen</val>
+        <val lang="es_ES">Marcado al margen</val>
     </key>
 	<key value="ask.kind_of_deletion">
         <val lang="de_DE">Art der Streichung</val>
-        <val lang="es_ES">Tipo de supresión</val>
+        <val lang="es_ES">Tipo de eliminación</val>
     </key>
     <key value="ask.deletion_overwritten">
         <val lang="de_DE">Tilgung durch Überschreibung des ursprünglichen Textes</val>
@@ -2257,7 +2257,7 @@
     </key>
     <key value="ask.enter_authority_uri">
         <val lang="de_DE">GND, VIAF etc. (URI) der Person</val>
-        <val lang="es_ES">VIAF  u otro identificador (URI) de persona</val>
+        <val lang="es_ES">VIAF u otro identificador (URI) de persona</val>
     </key>
     <key value="ask.surname">
         <val lang="de_DE">Nachname</val>
