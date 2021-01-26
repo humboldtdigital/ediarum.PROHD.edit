@@ -10,7 +10,8 @@
                 '|' has been used within the text area. </report>
         </rule>
     </pattern>
-
+    
+  
     <pattern id="allElements">
         <rule context="tei:*[not(self::tei:hi)]">
             <report test="@rendition and @rend" role="WARNING"> [W0001] The usage of @rend or
@@ -363,6 +364,13 @@
     <pattern id="date">
         <rule context="tei:date">
             <report test="@notBefore-iso or @notAfter-iso" role="error">The attributes @notBefore-iso or @notAfter-iso are not allowed.</report>
+        </rule>
+    </pattern>
+    
+    <pattern id="idno">
+        <rule context="tei:idno">
+            <report test="text()[matches(., '\?+')]" role="WARNING"> [W0007] The uncommon character
+                '???' has been used within the text area. If you are not sure about the content, leave the element empty.</report>
         </rule>
     </pattern>
 
