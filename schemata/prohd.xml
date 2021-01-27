@@ -103,6 +103,10 @@
         <elementSpec ident="date" mode="change">
           <attList>
             <attDef ident="cert" mode="change">
+              <!-- Suggestion made by Lou Burnard per email -->
+              <datatype>
+                <dataRef key="teidata.enumerated"/>
+              </datatype>
               <valList type="closed" mode="replace">
                 <valItem ident="high"/>
                 <valItem ident="low"/>
@@ -118,7 +122,8 @@
         </elementSpec>
         <elementSpec ident="msDesc" mode="change">
           <attList>
-            <attDef ident="rend" usage="req" mode="change">
+            <!-- This attribute cannot be required -->
+            <attDef ident="rend" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="print"/>
                 <valItem ident="copy"/>
@@ -365,6 +370,7 @@
                 <valItem ident="high"/>
               </valList>
             </attDef>
+            <!-- This is not necessary for now -->
             <!--<attDef ident="reason" mode="delete"/>-->
           </attList>
         </elementSpec>
