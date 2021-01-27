@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2021-01-20T13:58:02Z. .
+Schema generated from ODD source 2021-01-27T09:57:05Z. .
 TEI Edition: Version 4.1.0. Last updated on
 	19th August 2020, revision b414ba550
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
@@ -6948,25 +6948,27 @@ Posibles valores: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron; 5] H
          <ref name="tei_att.typed.attributes"/>
          <ref name="tei_att.declaring.attributes"/>
          <ref name="tei_att.docStatus.attributes"/>
-         <attribute name="rend">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(interpretación) indica cómo el elemento en cuestión ha sido dado o proporcionado en el texto fuente.</a:documentation>
-            <list>
-               <oneOrMore>
-                  <choice>
-                     <value>print</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                     <value>copy</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                     <value>manuscript</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                     <value>concept</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                     <value>notExtant</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  </choice>
-               </oneOrMore>
-            </list>
-         </attribute>
+         <optional>
+            <attribute name="rend">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(interpretación) indica cómo el elemento en cuestión ha sido dado o proporcionado en el texto fuente.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <choice>
+                        <value>print</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>copy</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>manuscript</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>concept</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>notExtant</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     </choice>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
          <optional>
             <attribute name="select">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">selecciona una o más alternativas; si se selecciona una de las alternativas, la ambigüidad o la incerteza se indica como resuelta; si se selecciona más de una alternativa, el grado de ambigüidad o incerteza se indica como reducido del número de las alternativas no seleccionadas.</a:documentation>
