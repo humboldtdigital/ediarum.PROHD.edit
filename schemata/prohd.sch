@@ -369,8 +369,8 @@
     
     <pattern id="idno">
         <rule context="tei:idno">
-            <report test="text()[matches(., '\?+')]" role="WARNING"> [W0007] The uncommon character
-                '???' has been used within the text area. If you are not sure about the content, leave the element empty.</report>
+            <report test="text()[matches(., '\?+$')]" role="WARNING"> [W0007] The uncommon character
+                '??' has been used within the text area. If you are not sure about the content, leave the element empty.</report>
         </rule>
     </pattern>
 
