@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../schemata/prohd.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" type="letter"
-    xml:id="ed_${id}">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="letter" xml:id="ed_${id}">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main">${ask('Titel der digitalen Ausgabe eingeben', generic, '')}</title>
+                <title type="main">${ask('Titel der digitalen Ausgabe eingeben', generic,
+                    '')}</title>
                 <funder ref="https://www.auswaertiges-amt.de/de/">Auswärtiges Amt</funder>
                 <funder ref="https://www.fritz-thyssen-stiftung.de/">Fritz Thyssen Stiftung</funder>
                 <funder ref="https://www.gerda-henkel-stiftung.de/">Gerda Henkel Stiftung</funder>
             </titleStmt>
             <editionStmt>
-                <p>Erste Ausgabe von Projekt Humboldt digital - ProHD (<date>${ask('Jahr der Publikation', generic, '')}</date>).</p>
+                <p>Erste Ausgabe von Projekt Humboldt digital - ProHD (<date>${ask('Jahr der
+                        Publikation', generic, '')}</date>).</p>
             </editionStmt>
             <publicationStmt>
-                <publisher>${ask('Herausgebende Institution', combobox, ('Berlin-Brandenburgische Akademie der Wissenschaften':'BBAW';'Oficina del Historiador de la Ciudad de la Habana':'OHCH'))}</publisher>
+                <publisher>${ask('Herausgebende Institution', combobox, ('Berlin-Brandenburgische
+                    Akademie der Wissenschaften':'BBAW';'Oficina del Historiador de la Ciudad de la
+                    Habana':'OHCH'))}</publisher>
                 <availability status="free">
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Namensnennung 4.0 International (CC BY 4.0) </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
+                        Namensnennung 4.0 International (CC BY 4.0) </licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -24,7 +28,9 @@
                     <msIdentifier>
                         <institution>${ask('Archiv eingeben', generic, '')}</institution>
                         <collection>${ask('Ggf. Sammlung', generic, '')}</collection>
-                        <idno>${ask('Signatur', generic, '')}</idno>
+                        <idno>
+                            <idno type="shelfmark">${ask('Signatur', generic, '')}</idno>
+                        </idno>
                     </msIdentifier>
                 </msDesc>
             </sourceDesc>

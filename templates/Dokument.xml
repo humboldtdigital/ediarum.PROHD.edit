@@ -24,7 +24,9 @@
                     <msIdentifier>
                         <institution>${ask('Archiv eingeben', generic, '')}</institution>
                         <collection>${ask('Ggf. Sammlung', generic, '')}</collection>
-                        <idno>${ask('Signatur', generic, '')}</idno>
+                        <idno>
+                            <idno type="shelfmark">${ask('Signatur', generic, '')}</idno>
+                        </idno>
                     </msIdentifier>
                 </msDesc>
             </sourceDesc>
