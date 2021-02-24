@@ -2082,7 +2082,7 @@ or ancestor-or-self::quote</String>
 													<serializableOrderedMap>
 														<entry>
 															<String>fragment</String>
-															<String>&lt;del xmlns="http://www.tei-c.org/ns/1.0" rendition="#s">&lt;gap reason="illegible" quantity="${ask('${i18n(ask.del_gap_quantity)}', generic, '1')}" unit="words" />&lt;/del>${caret}</String>
+															<String>&lt;del xmlns="http://www.tei-c.org/ns/1.0" rendition="#s">&lt;gap reason="illegible" unit="${ask('${i18n(ask.unit)}', combobox, ('chars':'${i18n(ask.unit_chars)}';'lines':'${i18n(ask.unit_lines)}';'pages':'${i18n(ask.unit_pages)}';'words':'${i18n(ask.unit_words)}';), 'chars')}" quantity="${ask('${i18n(ask.del_gap_quantity)}', generic, '1')}" />&lt;/del>${caret}</String>
 														</entry>
 													</serializableOrderedMap>
 												</field>
