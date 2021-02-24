@@ -11141,6 +11141,11 @@ ancestor-or-self::cell[not(@rendition)]</String>
 																<String>add</String>
 															</field>
 														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>metamark</String>
+															</field>
+														</menuItem>
 													</menuEntry-array>
 												</field>
 												<field name="context">
@@ -11242,6 +11247,16 @@ ancestor-or-self::cell[not(@rendition)]</String>
 														<menuItem>
 															<field name="actionID">
 																<String>orig-reg</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>lb</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>lb[break]</String>
 															</field>
 														</menuItem>
 														<menuSeparator/>
@@ -12455,7 +12470,7 @@ ancestor-or-self::cell[not(@rendition)]</String>
 										<field name="value">
 											<toolbarItem>
 												<field name="actionID">
-													<String>ex.name</String>
+													<String>abbr-expan</String>
 												</field>
 											</toolbarItem>
 										</field>
