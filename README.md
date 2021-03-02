@@ -9,9 +9,9 @@
 
 - To install ediarum.PROHD.edit follow the instructions in the [ediarum Set-UP](https://www.ediarum.org/docs/set-up/oxygen/tasks/t_speicherort_ediarumbase_festlegen.html); at this time, we do not yet have the ediarum.REGISTER *framework* available.
 - During the installation process, the only relevant change with respect to ediarum.BASE.edit is the use of @type attributes (instead of @doctype). To display the CSS file correctly in Oxygen XML Author, check that the installation contains the @type attributes. 
-* Go to *Options* --> *Preferences* --> *Document Type Association*
-* Select the ediarum.PROHD.edit and click on the *Edit* button.
-* Check in *Association Rules* that the *Attribute* column value is *type*; if not, double-click and type *type* in the *Local Name* field. 
+1. Go to *Options* --> *Preferences* --> *Document Type Association*
+2. Select the ediarum.PROHD.edit and click on the *Edit* button.
+3. Check in *Association Rules* that the *Attribute* column value is *type*; if not, double-click and type *type* in the *Local Name* field. 
 
 ![Attributes](attributes.png)
 
@@ -34,9 +34,9 @@
 
 - Para instalar ediarum.PROHD.edit sigue las instrucciones del [Set-UP de ediarum](https://www.ediarum.org/docs/set-up/oxygen/tasks/t_speicherort_ediarumbase_festlegen.html); en estos momentos, no tenemos aún disponible el *framework* ediarum.REGISTER.
 - Durante el proceso de instalación, el único cambio relevante respecto a ediarum.BASE.edit es el uso de atributos @type (en lugar de @doctype). Para visualizar correctamente, el fichero CSS en Oxygen XML Author, comprueba que la instalación contiene los atributos @type. 
-* Ve a *Options* --> *Preferences* --> Document Type Association
-* Selecciona el ediarum.PROHD.edit y clica en el botón *Edit*.
-* Comprueba en *Association Rules* que el valor de la columna *Attribute* es *type*; si no fuera así, haz doble clic y escribe *type* en el campo *Local Name*. 
+1. Ve a *Options* --> *Preferences* --> Document Type Association
+2. Selecciona el ediarum.PROHD.edit y clica en el botón *Edit*.
+3. Comprueba en *Association Rules* que el valor de la columna *Attribute* es *type*; si no fuera así, haz doble clic y escribe *type* en el campo *Local Name*. 
 
 ![Attributes](attributes.png)
 
@@ -59,9 +59,9 @@
 
 - Zur Installation von ediarum.PROHD.edit folgen Sie den Hinweisen im [ediarum Set-UP](https://www.ediarum.org/docs/set-up/oxygen/tasks/t_speicherort_ediarumbase_festlegen.html); das *Framework* ediarum.REGISTER steht derzeit noch nicht zur Verfügung.
 - Bei der Installation ist die einzige relevante Änderung in Bezug auf ediarum.BASE.edit die Verwendung von @type-Attributen (anstelle von @doctype). Um die CSS-Datei in Oxygen XML Author korrekt anzuzeigen, prüfen Sie, ob die Installation die @type-Attribute enthält. 
-* Gehen Sie zu *Optionen* --> *Einstellungen* --> Dokumenttyp-Zuordnung
-* Wählen Sie die ediarum.PROHD.edit und klicken Sie auf die Schaltfläche *Bearbeiten*.
-* Prüfen Sie unter *Verknüpfungsregeln*, dass der Wert der Spalte *Attribut* *type* ist; wenn nicht, doppelklicken Sie und geben Sie *type* in das Feld *Lokaler Name* ein. 
+1. Gehen Sie zu *Optionen* --> *Einstellungen* --> *Dokumenttyp-Zuordnung*
+2. Wählen Sie die ediarum.PROHD.edit und klicken Sie auf die Schaltfläche *Bearbeiten*.
+3. Prüfen Sie unter *Verknüpfungsregeln*, dass der Wert der Spalte *Attribut* *type* ist; wenn nicht, doppelklicken Sie und geben Sie *type* in das Feld *Lokaler Name* ein. 
 
 ![Attributes](attributes.png)
 
