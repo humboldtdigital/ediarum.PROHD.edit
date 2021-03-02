@@ -64,7 +64,7 @@
 1. Gehen Sie zu *Optionen* --> *Einstellungen* --> *Dokumenttyp-Zuordnung*
 2. Wählen Sie die ediarum.PROHD.edit und klicken Sie auf die Schaltfläche *Bearbeiten*.
 3. Prüfen Sie unter *Verknüpfungsregeln*, dass der Wert der Spalte *Attribut* *type* ist; wenn nicht, doppelklicken Sie und geben Sie *type* in das Feld *Lokaler Name* ein. 
-4. Klicken Sie auf "OK" und " Anwenden". 
+4. Klicken Sie auf "OK" und "Anwenden". 
 
 ![Attributes](attributes.png)
 
