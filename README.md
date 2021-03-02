@@ -12,6 +12,7 @@
 1. Go to *Options* --> *Preferences* --> *Document Type Association*
 2. Select the ediarum.PROHD.edit and click on the *Edit* button.
 3. Check in *Association Rules* that the *Attribute* column value is *type*; if not, double-click and type *type* in the *Local Name* field. 
+4. Click on "OK" and "Apply". 
 
 ![Attributes](attributes.png)
 
@@ -36,7 +37,8 @@
 - Durante el proceso de instalación, el único cambio relevante respecto a ediarum.BASE.edit es el uso de atributos @type (en lugar de @doctype). Para visualizar correctamente, el fichero CSS en Oxygen XML Author, comprueba que la instalación contiene los atributos @type. 
 1. Ve a *Options* --> *Preferences* --> Document Type Association
 2. Selecciona el ediarum.PROHD.edit y clica en el botón *Edit*.
-3. Comprueba en *Association Rules* que el valor de la columna *Attribute* es *type*; si no fuera así, haz doble clic y escribe *type* en el campo *Local Name*. 
+3. Comprueba en *Association Rules* que el valor de la columna *Attribute* es *type*; si no fuera así, haz doble clic y escribe *type* en el campo *Local Name*.
+4. Haz click en "Ok" y luego en "Apply". 
 
 ![Attributes](attributes.png)
 
@@ -62,6 +64,7 @@
 1. Gehen Sie zu *Optionen* --> *Einstellungen* --> *Dokumenttyp-Zuordnung*
 2. Wählen Sie die ediarum.PROHD.edit und klicken Sie auf die Schaltfläche *Bearbeiten*.
 3. Prüfen Sie unter *Verknüpfungsregeln*, dass der Wert der Spalte *Attribut* *type* ist; wenn nicht, doppelklicken Sie und geben Sie *type* in das Feld *Lokaler Name* ein. 
+4. Klicken Sie auf "OK" und " Anwenden". 
 
 ![Attributes](attributes.png)
 
