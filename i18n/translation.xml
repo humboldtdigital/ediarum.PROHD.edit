@@ -1415,8 +1415,8 @@
     <!-- CSS -->
     <!-- See css/standard.css -->
     <key value="css.title.placeholder-content">
-        <val lang="de_DE">Titel</val>
-        <val lang="es_ES">Título</val>
+        <val lang="de_DE">[Titel]</val>
+        <val lang="es_ES">[Título]</val>
     </key>
     <key value="css.title.idno.placeholder-content">
         <val lang="de_DE">Briefnummer</val>
@@ -1427,12 +1427,12 @@
         <val lang="es_ES">Signatura</val>
     </key>
     <key value="css.msDesc.physDesc.p.placeholder-content">
-        <val lang="de_DE">Hier Papier, Format etc. eintragen</val>
-        <val lang="es_ES">Introducir información sobre el papel, el formato, etc. aquí</val>
+        <val lang="de_DE">[Hier Papier, Format etc. eintragen]</val>
+        <val lang="es_ES">[Introducir información sobre el papel, el formato, etc. aquí]</val>
     </key>
     <key value="css.editor-after.content">
-        <val lang="de_DE">(Herausgeber)</val>
-        <val lang="es_ES">(Editor)</val>
+        <val lang="de_DE">Herausgeber</val>
+        <val lang="es_ES">Editor</val>
     </key>
     <key value="css.msDesc.content">
         <val lang="de_DE">Handschrift</val>
@@ -1471,16 +1471,16 @@
     </key>
     <!-- doubt: modified value in Spanish -->
     <key value="css.msDesc.physDesc-before.content">
-        <val lang="de_DE">Handschriftenbeschreibung: </val>
+        <val lang="de_DE">Handschriftenbeschreibung</val>
         <val lang="es_ES">Descripción física del documento</val>
     </key>
     <key value="css.sourceDesc.witness.msDesc-concept">
-        <val lang="de_DE">Entwurf: </val>
+        <val lang="de_DE">Entwurf</val>
         <val lang="es_ES">Borrador</val>
     </key>
     <key value="css.sourceDesc.witness.msDesc-copy">
-        <val lang="de_DE">Abschrift: </val>
-        <val lang="es_ES">Copia: </val>
+        <val lang="de_DE">Abschrift</val>
+        <val lang="es_ES">Copia</val>
     </key>
     <key value="css.profileDesc.creation-empty">
         <val lang="de_DE">[Angaben zur Erstellung des Manuskripts über Menü "Allgemein"
@@ -1489,8 +1489,8 @@
             menú "General"]</val>
     </key>
     <key value="css.profileDesc.creation.date-before">
-        <val lang="de_DE">Datum: </val>
-        <val lang="es_ES">Fecha: </val>
+        <val lang="de_DE">Datum</val>
+        <val lang="es_ES">Fecha</val>
     </key>
     <key value="css.date.notBefore">
         <val lang="de_DE">Nicht vor</val>
@@ -1501,16 +1501,16 @@
         <val lang="es_ES"> y no posterior a</val>
     </key>
     <key value="css.profileDesc.creation.persName-before">
-        <val lang="de_DE">Ersteller: </val>
-        <val lang="es_ES">Creador: </val>
+        <val lang="de_DE">Ersteller</val>
+        <val lang="es_ES">Creador</val>
     </key>
     <key value="css.profileDesc.creation.placeName-before">
-        <val lang="de_DE">Erstellungsort: </val>
-        <val lang="es_ES">Lugar de creación: </val>
+        <val lang="de_DE">Erstellungsort</val>
+        <val lang="es_ES">Lugar de creación</val>
     </key>
     <key value="css.profileDesc.abstract-before">
-        <val lang="de_DE">Regest: </val>
-        <val lang="es_ES">Resumen: </val>
+        <val lang="de_DE">Regest</val>
+        <val lang="es_ES">Resumen</val>
     </key>
     <key value="css.profileDesc.abstract.p">
         <val lang="de_DE">[Regest hier eingeben]</val>
@@ -1535,28 +1535,28 @@
             cartas"]</val>
     </key>
     <key value="css.correspAction-sent.persName-before">
-        <val lang="de_DE">Absender: </val>
-        <val lang="es_ES">Remitente:</val>
+        <val lang="de_DE">Absender</val>
+        <val lang="es_ES">Remitente</val>
     </key>
     <key value="css.correspAction-received.persName-before">
-        <val lang="de_DE">Empfänger: </val>
-        <val lang="es_ES">Destinatario: </val>
+        <val lang="de_DE">Empfänger</val>
+        <val lang="es_ES">Destinatario</val>
     </key>
     <key value="css.correspAction-sent.placeName-before">
-        <val lang="de_DE">Schreibort: </val>
-        <val lang="es_ES">Lugar de escritura: </val>
+        <val lang="de_DE">Schreibort</val>
+        <val lang="es_ES">Lugar de escritura</val>
     </key>
     <key value="css.correspAction-received.placeName-before">
-        <val lang="de_DE">Empfangsort: </val>
-        <val lang="es_ES">Lugar de recepción: </val>
+        <val lang="de_DE">Empfangsort</val>
+        <val lang="es_ES">Lugar de recepción</val>
     </key>
     <key value="css.correspAction-sent.date-before">
-        <val lang="de_DE">Schreibdatum: </val>
-        <val lang="es_ES">Fecha de escritura: </val>
+        <val lang="de_DE">Schreibdatum</val>
+        <val lang="es_ES">Fecha de escritura</val>
     </key>
     <key value="css.correspAction-received.date-before">
-        <val lang="de_DE">Empfangsdatum: </val>
-        <val lang="es_ES">Fecha de recepción: </val>
+        <val lang="de_DE">Empfangsdatum</val>
+        <val lang="es_ES">Fecha de recepción</val>
     </key>
     <key value="css.correspContext.ref-prev">
         <val lang="de_DE">Vorangehender Brief</val>
@@ -1567,7 +1567,7 @@
         <val lang="es_ES">Carta posterior</val>
     </key>
     <key value="css.correspDesc.note-before-first-of-type">
-        <val lang="de_DE">Anmerkungen zum Brief:</val>
+        <val lang="de_DE">Anmerkungen zum Brief</val>
         <val lang="es_ES">Comentario general sobre la carta</val>
     </key>
     <key value="css.correspDesc.note">
@@ -1673,16 +1673,16 @@
         <val lang="es_ES">[Línea de dirección postal]</val>
     </key>
     <key value="css.profileDesc.textClass-before">
-        <val lang="de_DE">Schlagwörter/Themen: </val>
-        <val lang="es_ES">Palabras clave o temas: </val>
+        <val lang="de_DE">Schlagwörter/Themen</val>
+        <val lang="es_ES">Palabras clave o temas</val>
     </key>
     <key value="css.revisionDesc.change">
         <val lang="de_DE">[Kommentar zur Änderung eingeben]</val>
         <val lang="es_ES">[Introducir un comentario sobre el cambio]</val>
     </key>
     <key value="css.revisionDesc.status">
-        <val lang="de_DE">Status: </val>
-        <val lang="es_ES">Estado: </val>
+        <val lang="de_DE">Status</val>
+        <val lang="es_ES">Estado</val>
     </key>
     <key value="css.revisionDesc.listChange-before">
         <val lang="de_DE">Bearbeitungshistorie</val>
@@ -1693,10 +1693,70 @@
         <val lang="es_ES">[Introducir un comentario sobre el cambio]</val>
     </key>
     <key value="css.revisionDesc.change-before">
-        <val lang="de_DE"> von </val>
-        <val lang="es_ES"> de </val>
+        <val lang="de_DE">von</val>
+        <val lang="es_ES">de</val>
     </key>
-
+    <key value="css.subtitle.placeholder-content">
+        <val lang="de_DE">[Untertitel]</val>
+        <val lang="es_ES">[Subtítulo]</val>
+    </key>
+    <key value="css.funders">
+        <val lang="de_DE">Geldgeber</val>
+        <val lang="es_ES">Financiadores</val>
+    </key>
+    <key value="css.sourceDesc.basetext">
+        <val lang="de_DE">Textgrundlage</val>
+        <val lang="es_ES">Base textual</val>
+    </key>
+    <key value="css.sourceDesc.witness">
+        <val lang="de_DE">Textzeuge(n)</val>
+        <val lang="es_ES">Testimonio(s)</val>
+    </key>
+    <key value="css.institution">
+        <val lang="de_DE">Einrichtung</val>
+        <val lang="es_ES">Institución</val>
+    </key>
+    <key value="css.repository">
+        <val lang="de_DE">Repositorium</val>
+        <val lang="es_ES">Repositorio</val>
+    </key>
+    <key value="css.collection">
+        <val lang="de_DE">Sammlung</val>
+        <val lang="es_ES">Colección</val>
+    </key>
+    <key value="css.shelfmark">
+        <val lang="de_DE">Signatur</val>
+        <val lang="es_ES">Signatura</val>
+    </key>
+    <key value="css.uri">
+        <val lang="de_DE">URI</val>
+        <val lang="es_ES">URI</val>
+    </key>
+    <key value="css.urlImages">
+        <val lang="de_DE">URL Bilddateien</val>
+        <val lang="es_ES">URL Imágenes</val>
+    </key>
+    <key value="css.urlCatalogue">
+        <val lang="de_DE">URL Katalog</val>
+        <val lang="es_ES">URL Catálogo</val>
+    </key>
+    <key value="css.urn">
+        <val lang="de_DE">URN</val>
+        <val lang="es_ES">URN</val>
+    </key>
+    <key value="css.profileDesc.correspDesc">
+        <val lang="de_DE">Angaben zur Korrespondenz</val>
+        <val lang="es_ES">Información sobre la correspondencia</val>
+    </key>
+    <key value="css.profileDesc.creation">
+        <val lang="de_DE">Angaben zur Entstehung des Textes</val>
+        <val lang="es_ES">Información sobre la creación del texto</val>
+    </key>
+    <key value="css.language">
+        <val lang="de_DE">Sprache</val>
+        <val lang="es_ES">Idioma</val>
+    </key>
+    
     <!-- Menu -->
 
     <key value="text.menu">
