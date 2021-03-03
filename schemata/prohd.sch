@@ -34,7 +34,7 @@
     </pattern>
 
     <pattern id="choiceSubelements">
-        <rule context="tei:corr | tei:abbr | tei:reg | tei:sic | tei:orig | tei:expan">
+        <rule context="tei:corr | tei:abbr | tei:reg | tei:sic | tei:expan">
             <assert test="parent::tei:choice" role="ERROR"> [E0013] Element " <name/> " must have a
                 parent element "choice". </assert>
         </rule>
