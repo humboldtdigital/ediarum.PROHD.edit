@@ -1,4 +1,17 @@
-# Information about the framework
+# About ediarum.BASE.edit
+
+© 2011-2020 by Berlin-Brandenburg Academey of Sciences and Humanities
+
+Developed by TELOTA, a DH working group of the Berlin-Brandenburg Academey of Sciences and Humanities http://www.bbaw.de/telota telota@bbaw.de
+
+Lead Developer:
+
+    Stefan Dumont
+    Martin Fechner
+    Sascha Grabsch
+    Nadine Arndt
+
+## About ediarum.PROHD.edit
 
 - This repository contains the latest public version of the *framework* for editing Humboldt Digital Project (ProHD).
 - Oxygen XML editor *framework* based on [ediarum.BASE.edit](https://www.ediarum.org/).
@@ -24,7 +37,7 @@
 
 ![language change](language_settings.png)
 
-# Información sobre el framework
+## Sobre ediarum.PROHD.edit
 
 - Este repositorio contiene la última versión pública del *framework* de edición de Proyecto Humboldt Digital (ProHD).
 - Oxygen XML editor *framework* basado en [ediarum.BASE.edit](https://www.ediarum.org/).
@@ -50,7 +63,7 @@
 
 ![language change](language_settings.png)
 
-# Infos zum Framework
+## Über ediarum.PROHD.edit
 
 - Dieses Repository enthält die neueste öffentliche Version des *Frameworks* zur Redaktion des Projekts Humboldt Digital (ProHD).
 - Oxygen-XML-Editor *Framework* basierend auf [ediarum.BASE.edit](https://www.ediarum.org/).
