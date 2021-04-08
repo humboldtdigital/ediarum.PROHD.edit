@@ -50,7 +50,7 @@
     </key>
     <key value="seg.name">
         <val lang="de_DE">Sachanmerkung einfügen</val>
-        <val lang="es_ES">Insertar un comentario editorial</val>
+        <val lang="es_ES">Comentario editorial</val>
     </key>
     <key value="seg.description">
         <val lang="de_DE">Sachanmerkung einfügen</val>
@@ -240,7 +240,7 @@
     </key>
     <key value="index_personen.name">
         <val lang="de_DE">Personenindex</val>
-        <val lang="es_ES">Índice de personas</val>
+        <val lang="es_ES">Registro de personas</val>
     </key>
     <key value="index_personen.description">
         <val lang="de_DE">Textstelle, die eine Person behandelt, indizieren</val>
@@ -256,7 +256,7 @@
     </key>
     <key value="index_places.name">
         <val lang="de_DE">Ortsindex</val>
-        <val lang="es_ES">Índice de lugares</val>
+        <val lang="es_ES">Registro de lugares</val>
     </key>
     <key value="index_places.description">
         <val lang="de_DE">Textstelle, die einen Ort behandelt, indizieren</val>
@@ -264,7 +264,7 @@
     </key>
     <key value="index_bibl.name">
         <val lang="de_DE">Werkindex</val>
-        <val lang="es_ES">Índice de obras</val>
+        <val lang="es_ES">Registro de obras</val>
     </key>
     <key value="index_bibl.description">
         <val lang="de_DE">Textstelle, die eine Veröffentlichung behandelt, indizieren</val>
