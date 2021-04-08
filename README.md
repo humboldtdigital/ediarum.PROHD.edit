@@ -6,10 +6,10 @@ Developed by TELOTA, a DH working group of the Berlin-Brandenburg Academey of Sc
 
 Lead Developer:
 
-    Stefan Dumont
-    Martin Fechner
-    Sascha Grabsch
-    Nadine Arndt
+* Stefan Dumont
+* Martin Fechner
+* Sascha Grabsch
+* Nadine Arndt
 
 ## About ediarum.PROHD.edit
 
