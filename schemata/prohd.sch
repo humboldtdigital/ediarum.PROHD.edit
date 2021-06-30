@@ -373,6 +373,18 @@
                 '??' has been used within the text area. If you are not sure about the content, leave the element empty.</report>
         </rule>
     </pattern>
+    
+    <pattern id="abstract">
+        <rule context="tei:abstract">
+            <assert test="@xml:lang" role="WARNING">The attribute @xml:lang is compulsory.</assert>
+        </rule>
+    </pattern>
 
+    <pattern id="language">
+        <rule context="tei:language">
+            <assert test="@ident" role="WARNING">The attribute @ident is compulsory.</assert>
+        </rule>
+    </pattern>
+    
 
 </schema>

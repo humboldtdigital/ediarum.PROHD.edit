@@ -36,9 +36,6 @@
             </sourceDesc>
         </fileDesc>
         <profileDesc>
-            <langUsage>
-                <language ident="deu">Deutsch</language>
-            </langUsage>
             <correspDesc>
                 <correspAction type="sent"> </correspAction>
                 <correspAction type="received"> </correspAction>

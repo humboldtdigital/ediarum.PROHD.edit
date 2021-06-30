@@ -1382,6 +1382,15 @@ titleStmt title[type = "sub"]{
     /* -oxy-placeholder-content: "[Untertitel]";*/
 }
 
+titleStmt title[type = "alt"]{
+    display: block;
+    font-size: 1.3em;
+    font-style: italic;
+     -oxy-placeholder-content: "${i18n(css.subtitle.placeholder-content)}";
+    -oxy-show-placeholder: always;
+    /* -oxy-placeholder-content: "[Untertitel]";*/
+}
+
 titleStmt title idno {
     padding-left: 0.5em;
     font-size: 0.9em;

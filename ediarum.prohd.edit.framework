@@ -1384,6 +1384,221 @@ or ancestor-or-self::quote</String>
 									</poPatch>
 									<poPatch>
 										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors/[18]/actionModes</String>
+										</field>
+										<field name="index">
+											<Integer>2</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors/[18]/actionModes</String>
+										</field>
+										<field name="index">
+											<Integer>1</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors/[18]/actionModes</String>
+										</field>
+										<field name="index">
+											<Integer>0</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors/[18]/actionModes</String>
+										</field>
+										<field name="index">
+											<Integer>0</Integer>
+										</field>
+										<field name="value">
+											<actionMode>
+												<field name="xpathCondition">
+													<String>//teiHeader/profileDesc[correspDesc and not(abstract)]</String>
+												</field>
+												<field name="argValues">
+													<serializableOrderedMap>
+														<entry>
+															<String>fragment</String>
+															<String>&lt;abstract xmlns="http://www.tei-c.org/ns/1.0" xml:lang="${ask('${i18n(ask.foreign_language)}', combobox, ('de':'${i18n(ask.lang_deu)}';'fr':'${i18n(ask.lang_fra)}'; 'en':'${i18n(ask.lang_eng)}';'es':'${i18n(ask.lang_spa)}'; ))}">&lt;p>&lt;/p>&lt;/abstract>
+</String>
+														</entry>
+														<entry>
+															<String>insertLocation</String>
+															<String>//profileDesc/correspDesc</String>
+														</entry>
+														<entry>
+															<String>insertPosition</String>
+															<String>After</String>
+														</entry>
+													</serializableOrderedMap>
+												</field>
+												<field name="operationID">
+													<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+												</field>
+											</actionMode>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors/[18]/actionModes</String>
+										</field>
+										<field name="index">
+											<Integer>1</Integer>
+										</field>
+										<field name="value">
+											<actionMode>
+												<field name="xpathCondition">
+													<String>//teiHeader/profileDesc[creation and not(abstract)]</String>
+												</field>
+												<field name="argValues">
+													<serializableOrderedMap>
+														<entry>
+															<String>fragment</String>
+															<String>&lt;abstract xmlns="http://www.tei-c.org/ns/1.0" xml:lang="${ask('${i18n(ask.foreign_language)}', combobox, ('de':'${i18n(ask.lang_deu)}';'fr':'${i18n(ask.lang_fra)}'; 'en':'${i18n(ask.lang_eng)}';'es':'${i18n(ask.lang_spa)}'; ))}">&lt;p>&lt;/p>&lt;/abstract>
+</String>
+														</entry>
+														<entry>
+															<String>insertLocation</String>
+															<String>//profileDesc/creation</String>
+														</entry>
+														<entry>
+															<String>insertPosition</String>
+															<String>After</String>
+														</entry>
+													</serializableOrderedMap>
+												</field>
+												<field name="operationID">
+													<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+												</field>
+											</actionMode>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors/[18]/actionModes</String>
+										</field>
+										<field name="index">
+											<Integer>2</Integer>
+										</field>
+										<field name="value">
+											<actionMode>
+												<field name="xpathCondition">
+													<String>//teiHeader/profileDesc[not(abstract)]</String>
+												</field>
+												<field name="argValues">
+													<serializableOrderedMap>
+														<entry>
+															<String>fragment</String>
+															<String>&lt;abstract xmlns="http://www.tei-c.org/ns/1.0" xml:lang="${ask('${i18n(ask.foreign_language)}', combobox, ('de':'${i18n(ask.lang_deu)}';'fr':'${i18n(ask.lang_fra)}'; 'en':'${i18n(ask.lang_eng)}';'es':'${i18n(ask.lang_spa)}'; ))}">&lt;p>&lt;/p>&lt;/abstract>
+</String>
+														</entry>
+														<entry>
+															<String>insertLocation</String>
+															<String>//profileDesc</String>
+														</entry>
+														<entry>
+															<String>insertPosition</String>
+															<String>Inside as first child</String>
+														</entry>
+													</serializableOrderedMap>
+												</field>
+												<field name="operationID">
+													<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+												</field>
+											</actionMode>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors/[18]/actionModes</String>
+										</field>
+										<field name="index">
+											<Integer>3</Integer>
+										</field>
+										<field name="value">
+											<actionMode>
+												<field name="xpathCondition">
+													<String>//teiHeader/profileDesc[abstract]</String>
+												</field>
+												<field name="argValues">
+													<serializableOrderedMap>
+														<entry>
+															<String>fragment</String>
+															<String>&lt;abstract xmlns="http://www.tei-c.org/ns/1.0" xml:lang="${ask('${i18n(ask.foreign_language)}', combobox, ('de':'${i18n(ask.lang_deu)}';'fr':'${i18n(ask.lang_fra)}'; 'en':'${i18n(ask.lang_eng)}';'es':'${i18n(ask.lang_spa)}'; ))}">&lt;p>&lt;/p>&lt;/abstract>
+</String>
+														</entry>
+														<entry>
+															<String>insertLocation</String>
+															<String>//profileDesc/abstract</String>
+														</entry>
+														<entry>
+															<String>insertPosition</String>
+															<String>After</String>
+														</entry>
+													</serializableOrderedMap>
+												</field>
+												<field name="operationID">
+													<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+												</field>
+											</actionMode>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
 											<String>authorExtensionDescriptor/actionDescriptors/[19]/name</String>
 										</field>
 										<field name="index">
@@ -10518,6 +10733,222 @@ ancestor-or-self::cell[not(@rendition)]</String>
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
+											<Integer>167</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>langUsage</String>
+												</field>
+												<field name="name">
+													<String>${i18n(langUsage.name)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(langUsage.description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String></String>
+												</field>
+												<field name="smallIconPath">
+													<String></String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>//teiHeader/profileDesc[correspDesc and not(langUsage)]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>fragment</String>
+																		<String>&lt;langUsage xmlns="http://www.tei-c.org/ns/1.0">&lt;language ident="${ask('${i18n(ask.foreign_language)}', combobox, ('de':'${i18n(ask.lang_deu)}';'fr':'${i18n(ask.lang_fra)}'; 'en':'${i18n(ask.lang_eng)}';'es':'${i18n(ask.lang_spa)}'; ))}">${ask('${i18n(ask.foreign_language)}', combobox, ('Deutsch':'${i18n(ask.lang_deu)}';'Français':'${i18n(ask.lang_fra)}'; 'English':'${i18n(ask.lang_eng)}';'Español':'${i18n(ask.lang_spa)}'; ))}&lt;/language>&lt;/langUsage>
+</String>
+																	</entry>
+																	<entry>
+																		<String>insertLocation</String>
+																		<String>//profileDesc/correspDesc</String>
+																	</entry>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>After</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>//teiHeader/profileDesc[creation and not(langUsage)]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>fragment</String>
+																		<String>&lt;langUsage xmlns="http://www.tei-c.org/ns/1.0">&lt;language ident="${ask('${i18n(ask.foreign_language)}', combobox, ('de':'${i18n(ask.lang_deu)}';'fr':'${i18n(ask.lang_fra)}'; 'en':'${i18n(ask.lang_eng)}';'es':'${i18n(ask.lang_spa)}'; ))}">${ask('${i18n(ask.foreign_language)}', combobox, ('Deutsch':'${i18n(ask.lang_deu)}';'Français':'${i18n(ask.lang_fra)}'; 'English':'${i18n(ask.lang_eng)}';'Español':'${i18n(ask.lang_spa)}'; ))}&lt;/language>&lt;/langUsage>
+</String>
+																	</entry>
+																	<entry>
+																		<String>insertLocation</String>
+																		<String>//profileDesc/creation</String>
+																	</entry>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>After</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>//teiHeader/profileDesc[not(langUsage)]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>fragment</String>
+																		<String>&lt;langUsage xmlns="http://www.tei-c.org/ns/1.0">&lt;language ident="${ask('${i18n(ask.foreign_language)}', combobox, ('de':'${i18n(ask.lang_deu)}';'fr':'${i18n(ask.lang_fra)}'; 'en':'${i18n(ask.lang_eng)}';'es':'${i18n(ask.lang_spa)}'; ))}">${ask('${i18n(ask.foreign_language)}', combobox, ('Deutsch':'${i18n(ask.lang_deu)}';'Français':'${i18n(ask.lang_fra)}'; 'English':'${i18n(ask.lang_eng)}';'Español':'${i18n(ask.lang_spa)}'; ))}&lt;/language>&lt;/langUsage>
+</String>
+																	</entry>
+																	<entry>
+																		<String>insertLocation</String>
+																		<String>//profileDesc</String>
+																	</entry>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>Inside as first child</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>//teiHeader/profileDesc[langUsage]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>fragment</String>
+																		<String>&lt;language xmlns="http://www.tei-c.org/ns/1.0" ident="${ask('${i18n(ask.foreign_language)}', combobox, ('de':'${i18n(ask.lang_deu)}';'fr':'${i18n(ask.lang_fra)}'; 'en':'${i18n(ask.lang_eng)}';'es':'${i18n(ask.lang_spa)}'; ))}">${ask('${i18n(ask.foreign_language)}', combobox, ('Deutsch':'${i18n(ask.lang_deu)}';'Français':'${i18n(ask.lang_fra)}'; 'English':'${i18n(ask.lang_eng)}';'Español':'${i18n(ask.lang_spa)}'; ))}&lt;/language>
+</String>
+																	</entry>
+																	<entry>
+																		<String>insertLocation</String>
+																		<String>//profileDesc/langUsage/language</String>
+																	</entry>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>After</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>168</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>alt_title</String>
+												</field>
+												<field name="name">
+													<String>${i18n(alt_title.name)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(alt_title.description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String></String>
+												</field>
+												<field name="smallIconPath">
+													<String></String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>//teiHeader/fileDesc/titleStmt/title[@type="main"]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>fragment</String>
+																		<String>&lt;title xmlns="http://www.tei-c.org/ns/1.0" type="alt"> &lt;/title></String>
+																	</entry>
+																	<entry>
+																		<String>insertLocation</String>
+																		<String>//teiHeader/fileDesc/titleStmt/title</String>
+																	</entry>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>After</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>true</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
 											<Integer>2</Integer>
 										</field>
 										<field name="value">
@@ -11642,6 +12073,11 @@ ancestor-or-self::cell[not(@rendition)]</String>
 														</menuItem>
 														<menuItem>
 															<field name="actionID">
+																<String>alt_title</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
 																<String>msDesc/physDesc</String>
 															</field>
 														</menuItem>
@@ -11701,6 +12137,11 @@ ancestor-or-self::cell[not(@rendition)]</String>
 														<menuItem>
 															<field name="actionID">
 																<String>abstract</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>langUsage</String>
 															</field>
 														</menuItem>
 														<menuItem>
@@ -12966,6 +13407,11 @@ ancestor-or-self::cell[not(@rendition)]</String>
 																	</toolbarItem>
 																	<toolbarItem>
 																		<field name="actionID">
+																			<String>alt_title</String>
+																		</field>
+																	</toolbarItem>
+																	<toolbarItem>
+																		<field name="actionID">
 																			<String>msDesc/physDesc</String>
 																		</field>
 																	</toolbarItem>
@@ -13025,6 +13471,11 @@ ancestor-or-self::cell[not(@rendition)]</String>
 																	<toolbarItem>
 																		<field name="actionID">
 																			<String>abstract</String>
+																		</field>
+																	</toolbarItem>
+																	<toolbarItem>
+																		<field name="actionID">
+																			<String>langUsage</String>
 																		</field>
 																	</toolbarItem>
 																	<toolbarItem>

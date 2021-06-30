@@ -211,6 +211,28 @@
           <content>
             <elementRef key="p" minOccurs="1" maxOccurs="unbounded"/>
           </content>
+          <attList>
+            <attDef ident="xml:lang" mode="change" usage="req">
+              <valList type="closed" mode="replace">
+                <valItem ident="de"/>
+                <valItem ident="es"/>
+                <valItem ident="en"/>
+              </valList>
+            </attDef>
+          </attList>
+        </elementSpec>
+        
+        <elementSpec ident="language" mode="change">
+          <attList>
+            <attDef ident="ident" mode="change" usage="req">
+              <valList type="closed" mode="replace">
+                <valItem ident="de"/>
+                <valItem ident="es"/>
+                <valItem ident="en"/>
+                <valItem ident="fr"/>
+              </valList>
+            </attDef>
+          </attList>
         </elementSpec>
 
 

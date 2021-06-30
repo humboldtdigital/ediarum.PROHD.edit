@@ -32,9 +32,6 @@
             </sourceDesc>
         </fileDesc>
         <profileDesc>
-            <langUsage>
-                <language ident="fra">Französisch</language>
-            </langUsage>
             <correspDesc>
                 <correspAction type="sent"> </correspAction>
                 <correspAction type="received"> </correspAction>
