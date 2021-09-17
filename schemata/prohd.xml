@@ -35,13 +35,13 @@
         <moduleRef key="textstructure"
           include="TEI argument back body byline closer dateline div docAuthor docDate docEdition docImprint docTitle epigraph front group imprimatur opener postscript salute signed text titlePage titlePart trailer"/>
         <moduleRef key="figures" include="cell figure figDesc formula row table"/>
-        <moduleRef key="linking" include="anchor seg"/>
+        <moduleRef key="linking" include="anchor seg linkGrp"/>
         <moduleRef key="tagdocs" include="att code eg gi ident val"/>
         <moduleRef key="transcr" include="facsimile fw space subst ex supplied metamark"/>
         <moduleRef key="msdescription"
           include="physDesc msDesc msIdentifier institution collection repository"/>
         <moduleRef key="textcrit" include="listWit witness"/>
-        <moduleRef key="namesdates" include="persName placeName surname forename orgName"/>
+        <moduleRef key="namesdates" include="persName placeName surname forename orgName listPerson listOrg listPlace person org place occupation affiliation birth death floruit"/>
         <moduleRef key="gaiji" include="g"/>
 
         <!-- element Specifications -->
@@ -168,11 +168,6 @@
         <!-- doubt: is this necessary? -->
         <!--<elementSpec ident="persName" mode="change"/>-->
         <elementSpec ident="placeName" mode="change">
-          <attList>
-            <attDef ident="key" usage="req" mode="change"/>
-          </attList>
-        </elementSpec>
-        <elementSpec ident="orgName" mode="change">
           <attList>
             <attDef ident="key" usage="req" mode="change"/>
           </attList>
@@ -309,6 +304,8 @@
                 <valItem ident="#uu"/>
                 <valItem ident="#mMM"/>
                 <valItem ident="#sup"/>
+                <valItem ident="#i"/>
+                <valItem ident="#b"/>
               </valList>
             </attDef>
           </attList>

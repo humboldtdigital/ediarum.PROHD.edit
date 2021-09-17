@@ -5,10 +5,10 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2021-06-30T11:50:31Z. .
-TEI Edition: Version 4.2.2. Last updated on
-	9th April 2021, revision 609a109b1
-TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.2.2/
+Schema generated from ODD source 2021-09-14T12:21:52Z. .
+TEI Edition: Version 4.3.0. Last updated on
+        31st August 2021, revision b4f72b1ff
+TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.3.0/
   
 --><!---->
    <define name="tei_macro.paraContent">
@@ -474,7 +474,11 @@ Posibles valores: 1] all; 2] most; 3] range</a:documentation>
       <optional>
          <attribute name="calendar">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indica el sistema o calendario en que se muestra una fecha.</a:documentation>
-            <data type="anyURI"/>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI"/>
+               </oneOrMore>
+            </list>
          </attribute>
       </optional>
    </define>
@@ -485,7 +489,7 @@ Posibles valores: 1] all; 2] most; 3] range</a:documentation>
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 context="tei:*[@calendar]">
-            <sch:assert test="string-length(.) gt 0"> @calendar indicates the system or calendar to
+            <sch:assert test="string-length(.) gt 0"> @calendar indicates one or more systems or calendars to
               which the date represented by the content of this element belongs, but this
               <sch:name/> element has no textual content.</sch:assert>
           </sch:rule>
@@ -494,7 +498,11 @@ Posibles valores: 1] all; 2] most; 3] range</a:documentation>
       <optional>
          <attribute name="period">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">suministra un indicador a una localización concreta que define un periodo de tiempo conocido dentro del cual el item datable se ha producido.</a:documentation>
-            <data type="anyURI"/>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI"/>
+               </oneOrMore>
+            </list>
          </attribute>
       </optional>
    </define>
@@ -1178,6 +1186,46 @@ Los valores sugeridos incluyen: 1] top; 2] bottom; 3] margin; 4] opposite; 5] ov
                <value>none</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">no se realiza ninguna otra evaluación de los targets más allá de la necesaria para encontrar el elemento especificado en el target del puntero.</a:documentation>
             </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tei_att.pointing.group.attributes">
+      <ref name="tei_att.pointing.attributes"/>
+      <ref name="tei_att.typed.attributes"/>
+      <ref name="tei_att.pointing.group.attribute.domains"/>
+      <ref name="tei_att.pointing.group.attribute.targFunc"/>
+   </define>
+   <define name="tei_att.pointing.group.attribute.domains">
+      <optional>
+         <attribute name="domains">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">establece facultativamente los identificadores de elementos al interno de los cuales se encuentran todos los elementos indicados de los contenidos del elemento en cuestión.</a:documentation>
+            <list>
+               <data type="anyURI"/>
+               <data type="anyURI"/>
+               <zeroOrMore>
+                  <data type="anyURI"/>
+               </zeroOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tei_att.pointing.group.attribute.targFunc">
+      <optional>
+         <attribute name="targFunc">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(función meta) describe la función de cada uno de los valores del atributo <code xmlns="http://www.w3.org/1999/xhtml">@target</code> (metas) de los marcadores correspondientes <code xmlns="http://www.w3.org/1999/xhtml">&lt;link&gt;</code>, <code xmlns="http://www.w3.org/1999/xhtml">&lt;join&gt;</code>, o <code xmlns="http://www.w3.org/1999/xhtml">&lt;alt&gt;</code>.</a:documentation>
+            <list>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
+               <zeroOrMore>
+                  <data type="token">
+                     <param name="pattern">[^\p{C}\p{Z}]+</param>
+                  </data>
+               </zeroOrMore>
+            </list>
          </attribute>
       </optional>
    </define>
@@ -1942,6 +1990,7 @@ Los valores sugeridos incluyen: 1] volume (volume); 2] issue; 3] page (page); 4]
    <define name="tei_model.global.meta">
       <choice>
          <ref name="tei_index"/>
+         <ref name="tei_linkGrp"/>
       </choice>
    </define>
    <define name="tei_model.milestoneLike">
@@ -2111,6 +2160,9 @@ Los valores sugeridos incluyen: 1] volume (volume); 2] issue; 3] page (page); 4]
          <ref name="tei_list"/>
          <ref name="tei_table"/>
          <ref name="tei_listWit"/>
+         <ref name="tei_listOrg"/>
+         <ref name="tei_listPerson"/>
+         <ref name="tei_listPlace"/>
       </choice>
    </define>
    <define name="tei_model.listLike_alternation">
@@ -2118,12 +2170,18 @@ Los valores sugeridos incluyen: 1] volume (volume); 2] issue; 3] page (page); 4]
          <ref name="tei_list"/>
          <ref name="tei_table"/>
          <ref name="tei_listWit"/>
+         <ref name="tei_listOrg"/>
+         <ref name="tei_listPerson"/>
+         <ref name="tei_listPlace"/>
       </choice>
    </define>
    <define name="tei_model.listLike_sequence">
       <ref name="tei_list"/>
       <ref name="tei_table"/>
       <ref name="tei_listWit"/>
+      <ref name="tei_listOrg"/>
+      <ref name="tei_listPerson"/>
+      <ref name="tei_listPlace"/>
    </define>
    <define name="tei_model.listLike_sequenceOptional">
       <optional>
@@ -2134,6 +2192,15 @@ Los valores sugeridos incluyen: 1] volume (volume); 2] issue; 3] page (page); 4]
       </optional>
       <optional>
          <ref name="tei_listWit"/>
+      </optional>
+      <optional>
+         <ref name="tei_listOrg"/>
+      </optional>
+      <optional>
+         <ref name="tei_listPerson"/>
+      </optional>
+      <optional>
+         <ref name="tei_listPlace"/>
       </optional>
    </define>
    <define name="tei_model.listLike_sequenceOptionalRepeatable">
@@ -2146,6 +2213,15 @@ Los valores sugeridos incluyen: 1] volume (volume); 2] issue; 3] page (page); 4]
       <zeroOrMore>
          <ref name="tei_listWit"/>
       </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tei_listOrg"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tei_listPerson"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tei_listPlace"/>
+      </zeroOrMore>
    </define>
    <define name="tei_model.listLike_sequenceRepeatable">
       <oneOrMore>
@@ -2156,6 +2232,15 @@ Los valores sugeridos incluyen: 1] volume (volume); 2] issue; 3] page (page); 4]
       </oneOrMore>
       <oneOrMore>
          <ref name="tei_listWit"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tei_listOrg"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tei_listPerson"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tei_listPlace"/>
       </oneOrMore>
    </define>
    <define name="tei_model.noteLike">
@@ -2250,6 +2335,9 @@ Los valores sugeridos incluyen: 1] volume (volume); 2] issue; 3] page (page); 4]
    <define name="tei_model.entryPart">
       <notAllowed/>
    </define>
+   <define name="tei_model.eventLike">
+      <notAllowed/>
+   </define>
    <define name="tei_model.global.edit">
       <choice>
          <ref name="tei_gap"/>
@@ -2262,6 +2350,31 @@ Los valores sugeridos incluyen: 1] volume (volume); 2] issue; 3] page (page); 4]
          <ref name="tei_model.pLike"/>
          <ref name="tei_lg"/>
          <ref name="tei_sp"/>
+      </choice>
+   </define>
+   <define name="tei_model.persStateLike">
+      <choice>
+         <ref name="tei_persName"/>
+         <ref name="tei_affiliation"/>
+         <ref name="tei_floruit"/>
+         <ref name="tei_occupation"/>
+      </choice>
+   </define>
+   <define name="tei_model.personLike">
+      <choice>
+         <ref name="tei_org"/>
+         <ref name="tei_person"/>
+      </choice>
+   </define>
+   <define name="tei_model.personPart">
+      <choice>
+         <ref name="tei_model.biblLike"/>
+         <ref name="tei_model.eventLike"/>
+         <ref name="tei_model.persStateLike"/>
+         <ref name="tei_name"/>
+         <ref name="tei_idno"/>
+         <ref name="tei_birth"/>
+         <ref name="tei_death"/>
       </choice>
    </define>
    <define name="tei_model.placeNamePart">
@@ -2319,6 +2432,14 @@ Los valores sugeridos incluyen: 1] volume (volume); 2] issue; 3] page (page); 4]
       <oneOrMore>
          <ref name="tei_model.placeNamePart_sequenceRepeatable"/>
       </oneOrMore>
+   </define>
+   <define name="tei_model.orgPart">
+      <choice>
+         <ref name="tei_model.eventLike"/>
+         <ref name="tei_listOrg"/>
+         <ref name="tei_listPerson"/>
+         <ref name="tei_listPlace"/>
+      </choice>
    </define>
    <define name="tei_model.publicationStmtPart.agency">
       <choice>
@@ -2527,29 +2648,41 @@ Los valores sugeridos incluyen: 1] volume (volume); 2] issue; 3] page (page); 4]
    <define name="tei_model.addressLike">
       <choice>
          <ref name="tei_address"/>
+         <ref name="tei_affiliation"/>
       </choice>
    </define>
    <define name="tei_model.addressLike_alternation">
       <choice>
          <ref name="tei_address"/>
+         <ref name="tei_affiliation"/>
       </choice>
    </define>
    <define name="tei_model.addressLike_sequence">
       <ref name="tei_address"/>
+      <ref name="tei_affiliation"/>
    </define>
    <define name="tei_model.addressLike_sequenceOptional">
       <optional>
          <ref name="tei_address"/>
+      </optional>
+      <optional>
+         <ref name="tei_affiliation"/>
       </optional>
    </define>
    <define name="tei_model.addressLike_sequenceOptionalRepeatable">
       <zeroOrMore>
          <ref name="tei_address"/>
       </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tei_affiliation"/>
+      </zeroOrMore>
    </define>
    <define name="tei_model.addressLike_sequenceRepeatable">
       <oneOrMore>
          <ref name="tei_address"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tei_affiliation"/>
       </oneOrMore>
    </define>
    <define name="tei_model.nameLike">
@@ -2828,6 +2961,11 @@ Los valores sugeridos incluyen: 1] volume (volume); 2] issue; 3] page (page); 4]
          </attribute>
       </optional>
    </define>
+   <define name="tei_model.placeLike">
+      <choice>
+         <ref name="tei_place"/>
+      </choice>
+   </define>
    <define name="tei_att.milestoneUnit.attributes">
       <ref name="tei_att.milestoneUnit.attribute.unit"/>
    </define>
@@ -2885,8 +3023,8 @@ Los valores sugeridos incluyen: 1] page; 2] column; 3] line; 4] book; 5] poem; 6
                   id="prohd-p-abstractModel-structure-l-constraint-report-6">
             <rule context="tei:p">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                       test="ancestor::tei:l[not(.//tei:note//tei:p[. = current()])]">
-        Abstract model violation: Lines may not contain higher-level structural elements such as div, p, or ab.
+                       test="(ancestor::tei:l or ancestor::tei:lg) and not(parent::tei:figure or parent::tei:note or ancestor::tei:floatingText)">
+        Abstract model violation: Lines may not contain higher-level structural elements such as div, p, or ab, unless p is a child of figure or note, or is a descendant of floatingText.
       </report>
             </rule>
          </pattern>
@@ -2993,6 +3131,10 @@ Los valores sugeridos incluyen: 1] page; 2] column; 3] line; 4] book; 5] poem; 6
                      <value>#mMM</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      <value>#sup</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     <value>#i</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     <value>#b</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   </choice>
                </oneOrMore>
@@ -3631,12 +3773,16 @@ Measures]</a:documentation>
          <optional>
             <attribute name="calendar">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indica el sistema o calendario en que se muestra una fecha.</a:documentation>
-               <choice>
-                  <value>#Julian</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>#Gregorian</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               </choice>
+               <list>
+                  <oneOrMore>
+                     <choice>
+                        <value>#Julian</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>#Gregorian</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     </choice>
+                  </oneOrMore>
+               </list>
             </attribute>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
@@ -3645,7 +3791,7 @@ Measures]</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       context="tei:*[@calendar]">
-               <sch:assert test="string-length(.) gt 0"> @calendar indicates the system or calendar to
+               <sch:assert test="string-length(.) gt 0"> @calendar indicates one or more systems or calendars to
               which the date represented by the content of this element belongs, but this
               <sch:name/> element has no textual content.</sch:assert>
             </sch:rule>
@@ -5718,8 +5864,9 @@ Posibles valores: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] draft
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="prohd-div-abstractModel-structure-l-constraint-report-12">
             <rule context="tei:div">
-               <report xmlns:rng="http://relaxng.org/ns/structure/1.0" test="ancestor::tei:l">
-        Abstract model violation: Lines may not contain higher-level structural elements such as div.
+               <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                       test="(ancestor::tei:l or ancestor::tei:lg) and not(ancestor::tei:floatingText)">
+        Abstract model violation: Lines may not contain higher-level structural elements such as div, unless div is a descendant of floatingText.
       </report>
             </rule>
          </pattern>
@@ -5727,8 +5874,8 @@ Posibles valores: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] draft
                   id="prohd-div-abstractModel-structure-p-constraint-report-13">
             <rule context="tei:div">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                       test="ancestor::tei:p or ancestor::tei:ab and not(ancestor::tei:floatingText)">
-        Abstract model violation: p and ab may not contain higher-level structural elements such as div.
+                       test="(ancestor::tei:p or ancestor::tei:ab) and not(ancestor::tei:floatingText)">
+        Abstract model violation: p and ab may not contain higher-level structural elements such as div, unless div is a descendant of floatingText.
       </report>
             </rule>
          </pattern>
@@ -6540,6 +6687,25 @@ Los valores sugeridos incluyen: 1] label; 2] data</a:documentation>
             </list>
          </attribute>
       </optional>
+   </define>
+   <define name="tei_linkGrp">
+      <element name="linkGrp">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(grupo de enlace) define un conjunto de asociaciones o de vínculos hipertextuales. [16.1. Links]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="tei_model.descLike"/>
+            </zeroOrMore>
+            <oneOrMore>
+               <choice>
+        
+                  <ref name="tei_ptr"/>
+               </choice>
+            </oneOrMore>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.pointing.group.attributes"/>
+         <empty/>
+      </element>
    </define>
    <define name="tei_anchor">
       <element name="anchor">
@@ -7426,16 +7592,8 @@ Posibles valores: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron; 5] H
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.datable.attributes"/>
          <ref name="tei_att.editLike.attributes"/>
-         <ref name="tei_att.personal.attribute.full"/>
-         <ref name="tei_att.personal.attribute.sort"/>
-         <ref name="tei_att.naming.attribute.role"/>
-         <ref name="tei_att.naming.attribute.nymRef"/>
-         <ref name="tei_att.canonical.attribute.ref"/>
+         <ref name="tei_att.personal.attributes"/>
          <ref name="tei_att.typed.attributes"/>
-         <attribute name="key">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides an externally-defined means of identifying the entity (or entities) being named, using a coded value of some kind.</a:documentation>
-            <data type="string"/>
-         </attribute>
          <empty/>
       </element>
    </define>
@@ -7488,6 +7646,383 @@ Posibles valores: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron; 5] H
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides an externally-defined means of identifying the entity (or entities) being named, using a coded value of some kind.</a:documentation>
             <data type="string"/>
          </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_affiliation">
+      <element name="affiliation">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(affiliation) contiene una descripción informal de la afiliación presente o pasada de una persona a una determinada organización, p.ej. un empleado o un patrocinador. [15.2.2. The Participant Description]</a:documentation>
+         <ref name="tei_macro.phraseSeq"/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.editLike.attributes"/>
+         <ref name="tei_att.datable.attributes"/>
+         <ref name="tei_att.naming.attributes"/>
+         <ref name="tei_att.typed.attribute.subtype"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">caracteriza el elemento utilizando una clasificación o tipología funcional.
+Posibles valores: 1] sponsor; 2] recommend; 3] discredit; 4] pledged</a:documentation>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_birth">
+      <element name="birth">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(birth) contiene información relativa al nacimiento de una persona, p.ej. fecha y lugar de nacimiento. [15.2.2. The Participant Description]</a:documentation>
+         <ref name="tei_macro.phraseSeq"/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.editLike.attributes"/>
+         <ref name="tei_att.datable.attributes"/>
+         <ref name="tei_att.dimensions.attributes"/>
+         <ref name="tei_att.naming.attributes"/>
+         <ref name="tei_att.typed.attribute.subtype"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">caracteriza el elemento utilizando una clasificación o tipología funcional.
+Posibles valores: 1] caesarean (caesarean section); 2] vaginal (vaginal delivery); 3] exNihilo (ex nihilo); 4] incorporated; 5] founded; 6] established</a:documentation>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_death">
+      <element name="death">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(death) contiene informaciones relativas a la defunción de una persona, del tipo lugar y fecha. [15.2.2. The Participant Description]</a:documentation>
+         <ref name="tei_macro.phraseSeq"/>
+         <ref name="tei_att.datable.attributes"/>
+         <ref name="tei_att.dimensions.attributes"/>
+         <ref name="tei_att.editLike.attributes"/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.naming.attributes"/>
+         <ref name="tei_att.typed.attribute.subtype"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">caracteriza el elemento utilizando una clasificación o tipología funcional.
+Posibles valores: 1] proclaimed; 2] assumed; 3] verified; 4] clinical; 5] brain; 6] natural; 7] unnatural; 8] fragmentation; 9] dissolution</a:documentation>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_floruit">
+      <element name="floruit">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(floruit) contiene información relativa al periodo de actividad de una persona. [13.3.2.1. Personal Characteristics]</a:documentation>
+         <ref name="tei_macro.phraseSeq"/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.datable.attributes"/>
+         <ref name="tei_att.dimensions.attributes"/>
+         <ref name="tei_att.editLike.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_listOrg">
+      <element name="listOrg">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(lista de organizaciones) contiene una lista de descripciones, que proporciona a la información sobre una organización identificable. [13.2.2. Organizational Names]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="tei_model.headLike"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="tei_desc"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <empty/>
+            </zeroOrMore>
+            <oneOrMore>
+               <group>
+                  <oneOrMore>
+                     <choice>
+                        <ref name="tei_org"/>
+                        <ref name="tei_listOrg"/>
+                     </choice>
+                  </oneOrMore>
+                  <zeroOrMore>
+                     <empty/>
+                  </zeroOrMore>
+               </group>
+            </oneOrMore>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.declarable.attributes"/>
+         <ref name="tei_att.sortable.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_listPerson">
+      <element name="listPerson">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(lista de personas) contiene una lista de descripciones, y cada una de las cuales proporciona información relativa a una persona específica o a un grupo de personas, p.ej, los participantes de una interacción verbal o las personas referidas en una fuente histórica. [13.3.2. The Person Element 15.2. Contextual Information 2.4. The Profile Description 15.3.2. Declarable Elements]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="tei_model.headLike"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="tei_desc"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <empty/>
+            </zeroOrMore>
+            <oneOrMore>
+               <group>
+                  <oneOrMore>
+                     <choice>
+                        <ref name="tei_model.personLike"/>
+                        <ref name="tei_listPerson"/>
+                     </choice>
+                  </oneOrMore>
+                  <zeroOrMore>
+                     <empty/>
+                  </zeroOrMore>
+               </group>
+            </oneOrMore>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.declarable.attributes"/>
+         <ref name="tei_att.sortable.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_listPlace">
+      <element name="listPlace">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(lista de lugares) contiene una lista de lugares, seguida opcionalmente por una lista de interelaciones (a excepción de la inclusión) definidas entre ellos. [2.2.7. The Source Description 13.3.4. Places]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="tei_model.headLike"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="tei_desc"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <empty/>
+            </zeroOrMore>
+            <oneOrMore>
+               <group>
+                  <oneOrMore>
+                     <choice>
+                        <ref name="tei_model.placeLike"/>
+                        <ref name="tei_listPlace"/>
+                     </choice>
+                  </oneOrMore>
+                  <zeroOrMore>
+                     <empty/>
+                  </zeroOrMore>
+               </group>
+            </oneOrMore>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.declarable.attributes"/>
+         <ref name="tei_att.sortable.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_occupation">
+      <element name="occupation">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(occupation) contiene una descripción informal de las actividades, la profesión o la ocupación de una persona. [15.2.2. The Participant Description]</a:documentation>
+         <ref name="tei_macro.specialPara"/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.datable.attributes"/>
+         <ref name="tei_att.editLike.attributes"/>
+         <ref name="tei_att.naming.attributes"/>
+         <ref name="tei_att.typed.attribute.subtype"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">caracteriza el elemento utilizando una clasificación o tipología funcional.
+Posibles valores: 1] primary; 2] other; 3] paid; 4] unpaid</a:documentation>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="scheme">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifica el sistema de clasificación o la taxonomía utilizada para la identificación de un elemento <code xmlns="http://www.w3.org/1999/xhtml">&lt;taxonomy&gt;</code> colocado en el encabezado.</a:documentation>
+               <data type="anyURI"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="code">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifica un código relativo a la ocupación definido en el sistema de clasificación o taxonomía establecido por el atributo <code xmlns="http://www.w3.org/1999/xhtml">@scheme</code>.</a:documentation>
+               <data type="anyURI"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_org">
+      <element name="org">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(organización) proporciona a la información sobre una organización identificable tal como un negocio, una tribu, o cualquier otro grupo de personas. [13.3.3. Organizational Data]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="tei_model.headLike"/>
+            </zeroOrMore>
+            <choice>
+               <zeroOrMore>
+                  <ref name="tei_model.pLike"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <choice>
+                     <ref name="tei_model.labelLike"/>
+                     <ref name="tei_model.nameLike"/>
+                     <ref name="tei_model.placeLike"/>
+                     <ref name="tei_model.orgPart"/>
+                     <ref name="tei_model.milestoneLike"/>
+                  </choice>
+               </zeroOrMore>
+            </choice>
+            <zeroOrMore>
+               <choice>
+                  <ref name="tei_model.noteLike"/>
+                  <ref name="tei_model.biblLike"/>
+                  <ref name="tei_linkGrp"/>
+        
+                  <ref name="tei_ptr"/>
+               </choice>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="tei_model.personLike"/>
+            </zeroOrMore>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.editLike.attributes"/>
+         <ref name="tei_att.sortable.attributes"/>
+         <optional>
+            <attribute name="role">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">establece el rol o la clasificación primaria de una persona.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="token">
+                        <param name="pattern">[^\p{C}\p{Z}]+</param>
+                     </data>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_person">
+      <element name="person">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(person) proporciona información relativa a un individuo específico, p.ej. un participante de una interacción verbal o una persona identificada por una fuente histórica. [13.3.2. The Person Element 15.2.2. The Participant Description]</a:documentation>
+         <choice>
+      
+            <oneOrMore>
+               <ref name="tei_model.pLike"/>
+            </oneOrMore>
+      
+      
+            <zeroOrMore>
+               <choice>
+                  <ref name="tei_model.personPart"/>
+                  <ref name="tei_model.global"/>
+                  <ref name="tei_ptr"/>
+               </choice>
+            </zeroOrMore>
+      
+         </choice>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.editLike.attributes"/>
+         <ref name="tei_att.sortable.attributes"/>
+         <optional>
+            <attribute name="role">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">establece el rol o la clasificación primaria de una persona.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="token">
+                        <param name="pattern">[^\p{C}\p{Z}]+</param>
+                     </data>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="sex">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">especifica el sexo de una persona.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="token">
+                        <param name="pattern">[^\p{C}\p{Z}]+</param>
+                     </data>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="age">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">especifica un intervalo de edad para una persona.</a:documentation>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_place">
+      <element name="place">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(place) contiene los datos sobre una localización geográfica [13.3.4. Places]</a:documentation>
+         <group>
+      
+            <zeroOrMore>
+               <ref name="tei_model.headLike"/>
+            </zeroOrMore>
+      
+            <choice>
+        
+          
+               <zeroOrMore>
+                  <ref name="tei_model.pLike"/>
+               </zeroOrMore>
+          
+        
+        
+               <zeroOrMore>
+                  <choice>
+                     <ref name="tei_model.labelLike"/>
+                     <ref name="tei_model.placeStateLike"/>
+                     <ref name="tei_model.eventLike"/>
+                     <ref name="tei_name"/>
+                  </choice>
+               </zeroOrMore>
+        
+            </choice>
+      
+            <zeroOrMore>
+               <choice>
+                  <ref name="tei_model.noteLike"/>
+                  <ref name="tei_model.biblLike"/>
+                  <ref name="tei_idno"/>
+                  <ref name="tei_ptr"/>
+                  <ref name="tei_linkGrp"/>
+          
+               </choice>
+            </zeroOrMore>
+      
+      
+            <zeroOrMore>
+               <choice>
+                  <ref name="tei_model.placeLike"/>
+                  <ref name="tei_listPlace"/>
+               </choice>
+            </zeroOrMore>
+      
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.editLike.attributes"/>
+         <ref name="tei_att.sortable.attributes"/>
          <empty/>
       </element>
    </define>

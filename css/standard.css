@@ -533,6 +533,7 @@ text body {
 text head {
     display: block;
     margin: 0 0 1em 0;
+    font-weight: bold;
 }
 
 text head[type = "h1"] {
@@ -1235,6 +1236,11 @@ profileDesc textClass:before {
 }
 */
 
+profileDesc textClass catRef{
+    content: attr(target);
+    display: block;
+}
+
 profileDesc textClass keywords,
 profileDesc textClass keywords term {
     -oxy-display-tags: none;
@@ -1854,10 +1860,6 @@ profileDesc langUsage language {
     font-style: italic;
 }
 
-profileDesc textClass * {
-    text-indent: 50px;
-}
-
 profileDesc textClass:before {
    /* content: "Schlagwörter/Themen: ";*/
    content:"${i18n(css.profileDesc.textClass-before)}";
@@ -1947,3 +1949,19 @@ facsimile:before {
     padding-bottom: 0.2em;
 }
 
+org {
+    display: block;
+}
+
+person {
+    display: block;
+}
+
+
+bibl {
+    font-style: italic;
+}
+
+title {
+    font-style: italic;
+}
