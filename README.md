@@ -3,7 +3,6 @@
 - This repository contains the latest public version of the *framework* for editing Humboldt Digital Project (ProHD).
 - Oxygen XML editor *framework* based on [ediarum.BASE.edit](https://www.ediarum.org/).
 - Development and localisation into Spanish by Antonio Rojas Castro.
-- [Documentation](https://www.ediarum.org/docs/ediarum.BASE.manual_es/index.html) in Spanish about our encoding principles.
 - Contact: antonio.rojas-castro[at]bbaw.de
 
 ## Installation
@@ -30,7 +29,6 @@
 - Este repositorio contiene la última versión pública del *framework* de edición de Proyecto Humboldt Digital (ProHD).
 - Oxygen XML editor *framework* basado en [ediarum.BASE.edit](https://www.ediarum.org/).
 - Desarrollo y localización al español de Antonio Rojas Castro.
-- [Documentación](https://www.ediarum.org/docs/ediarum.BASE.manual_es/index.html) en español sobre los principios de codificación.
 - Contacto: antonio.rojas-castro[at]bbaw.de
 
 ## Instalación
@@ -57,7 +55,6 @@
 - Dieses Repository enthält die neueste öffentliche Version des *Frameworks* zur Redaktion des Projekts Humboldt Digital (ProHD).
 - Oxygen-XML-Editor *Framework* basierend auf [ediarum.BASE.edit](https://www.ediarum.org/).
 - Entwicklung und Lokalisierung ins Spanische von Antonio Rojas Castro.
-- [Dokumentation](https://www.ediarum.org/docs/ediarum.BASE.manual/) in Deutsch über unsere Kodierungsprinzipien.
 - Ansprechpartner: antonio.rojas-castro[at]bbaw.de
 
 ## Installation

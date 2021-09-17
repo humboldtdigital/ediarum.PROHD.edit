@@ -10,13 +10,13 @@
                 <funder ref="https://www.gerda-henkel-stiftung.de/">Gerda Henkel Stiftung</funder>
             </titleStmt>
             <editionStmt>
-                <p>Primera edición de Proyecto Humboldt digital - ProHD (<date>${ask('Año de la edición',
-                    generic, '')}</date>).</p>
+                <p>Proyecto Humboldt digital (<date>${ask('Año de la edición',
+                    generic, '')}</date>)</p>
             </editionStmt>
             <publicationStmt>
                 <publisher>${ask('Institución que publica la edición digital', combobox, ('Berlin-Brandenburgische Akademie der Wissenschaften':'BBAW';'Oficina del Historiador de la Ciudad de la Habana':'OHCH'))}</publisher>
                 <availability status="free">
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Atribución 4.0 Internacional (CC BY 4.0) </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Creative Commons (CC BY 4.0) </licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -41,6 +41,38 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
+        <encodingDesc>
+            <classDecl>
+                <taxonomy xml:id="pb-taxonomy">
+                    <category xml:id="genre">
+                        <category xml:id="diaries"/>
+                        <category xml:id="essays"/>
+                        <category xml:id="notebooks"/>
+                        <category xml:id="correspondence"/>
+                        <category xml:id="travelwriting"/>
+                    </category>
+                    <category xml:id="form">
+                        <category xml:id="manuscript"/>
+                        <category xml:id="print"/>
+                    </category>
+                    <category xml:id="subjects">
+                        <category xml:id="climatology"/>
+                        <category xml:id="colonialism"/>
+                        <category xml:id="demography"/>
+                        <category xml:id="economicconditions"/>
+                        <category xml:id="geography"/>
+                        <category xml:id="medicine"/>
+                        <category xml:id="science"/>
+                        <category xml:id="plantations"/>
+                        <category xml:id="coffee"/>
+                        <category xml:id="sugar"/>
+                        <category xml:id="slavery"/>
+                        <category xml:id="trade"/>
+                        <category xml:id="emancipation"/>
+                    </category>
+                </taxonomy>
+            </classDecl>
+        </encodingDesc>
     </teiHeader>
     <text>
         <body>
