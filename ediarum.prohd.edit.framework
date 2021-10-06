@@ -5244,6 +5244,40 @@ calendar="${ask('${i18n(ask.date_calendar)}', combobox, ('#Gregorian':'${i18n(as
 											<String>authorExtensionDescriptor/actionDescriptors/[74]/actionModes</String>
 										</field>
 										<field name="index">
+											<Integer>2</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors/[74]/actionModes</String>
+										</field>
+										<field name="index">
+											<Integer>1</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors/[74]/actionModes</String>
+										</field>
+										<field name="index">
 											<Integer>0</Integer>
 										</field>
 										<field name="value">
@@ -5287,6 +5321,144 @@ calendar="${ask('${i18n(ask.date_calendar)}', combobox, ('#Gregorian':'${i18n(as
 														<entry>
 															<String>insertPosition</String>
 															<String>Before</String>
+														</entry>
+														<entry>
+															<String>item rendering</String>
+															<String>$XPATH{/span}</String>
+														</entry>
+														<entry>
+															<String>item separator</String>
+															<String> </String>
+														</entry>
+														<entry>
+															<String>item variable</String>
+															<String>$XPATH{@xml:id}</String>
+														</entry>
+														<entry>
+															<String>multiple selection</String>
+															<String>false</String>
+														</entry>
+														<entry>
+															<String>namespaces</String>
+															<String>tei:http://www.tei-c.org/ns/1.0</String>
+														</entry>
+														<entry>
+															<String>node</String>
+															<String>//li</String>
+														</entry>
+													</serializableOrderedMap>
+												</field>
+												<field name="operationID">
+													<String>org.bbaw.telota.ediarum.RegisterInsertFragmentOperation</String>
+												</field>
+											</actionMode>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors/[74]/actionModes</String>
+										</field>
+										<field name="index">
+											<Integer>1</Integer>
+										</field>
+										<field name="value">
+											<actionMode>
+												<field name="xpathCondition">
+													<String>//correspDesc[not(correspContext)]</String>
+												</field>
+												<field name="argValues">
+													<serializableOrderedMap>
+														<entry>
+															<String>URL</String>
+															<String>${ediarum_project_domain}${ediarum_projects_directory}${ediarum_project_name}${ediarum_index_letters}</String>
+														</entry>
+														<entry>
+															<String>element</String>
+															<String>&lt;correspContext xmlns='http://www.tei-c.org/ns/1.0'>
+  &lt;ref type="${ask('${i18n(ask.type_of_linked_letter)}', combobox, ('prev':'${i18n(ask.letter_prev)}';'next':'${i18n(ask.letter_next)}';), 'prev')}" target="$ITEMS"/>
+&lt;/correspContext></String>
+														</entry>
+														<entry>
+															<String>insertLocation</String>
+															<String>//correspDesc</String>
+														</entry>
+														<entry>
+															<String>insertPosition</String>
+															<String>Inside as last child</String>
+														</entry>
+														<entry>
+															<String>item rendering</String>
+															<String>$XPATH{/span}</String>
+														</entry>
+														<entry>
+															<String>item separator</String>
+															<String> </String>
+														</entry>
+														<entry>
+															<String>item variable</String>
+															<String>$XPATH{@xml:id}</String>
+														</entry>
+														<entry>
+															<String>multiple selection</String>
+															<String>false</String>
+														</entry>
+														<entry>
+															<String>namespaces</String>
+															<String>tei:http://www.tei-c.org/ns/1.0</String>
+														</entry>
+														<entry>
+															<String>node</String>
+															<String>//li</String>
+														</entry>
+													</serializableOrderedMap>
+												</field>
+												<field name="operationID">
+													<String>org.bbaw.telota.ediarum.RegisterInsertFragmentOperation</String>
+												</field>
+											</actionMode>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors/[74]/actionModes</String>
+										</field>
+										<field name="index">
+											<Integer>2</Integer>
+										</field>
+										<field name="value">
+											<actionMode>
+												<field name="xpathCondition">
+													<String>//correspDesc[correspContext]</String>
+												</field>
+												<field name="argValues">
+													<serializableOrderedMap>
+														<entry>
+															<String>URL</String>
+															<String>${ediarum_project_domain}${ediarum_projects_directory}${ediarum_project_name}${ediarum_index_letters}</String>
+														</entry>
+														<entry>
+															<String>element</String>
+															<String>&lt;ref xmlns='http://www.tei-c.org/ns/1.0' type="${ask('${i18n(ask.type_of_linked_letter)}', combobox, ('prev':'${i18n(ask.letter_prev)}';'next':'${i18n(ask.letter_next)}';), 'prev')}" target="$ITEMS"/></String>
+														</entry>
+														<entry>
+															<String>insertLocation</String>
+															<String>//correspContext</String>
+														</entry>
+														<entry>
+															<String>insertPosition</String>
+															<String>Inside as last child</String>
 														</entry>
 														<entry>
 															<String>item rendering</String>
@@ -12404,16 +12576,6 @@ ancestor-or-self::cell[not(@rendition)]</String>
 																<String>placeName</String>
 															</field>
 														</menuItem>
-														<menuItem>
-															<field name="actionID">
-																<String>bibl</String>
-															</field>
-														</menuItem>
-														<menuItem>
-															<field name="actionID">
-																<String>rs[term]</String>
-															</field>
-														</menuItem>
 														<menuSeparator/>
 														<menuItem>
 															<field name="actionID">
@@ -12423,11 +12585,6 @@ ancestor-or-self::cell[not(@rendition)]</String>
 														<menuItem>
 															<field name="actionID">
 																<String>index_places</String>
-															</field>
-														</menuItem>
-														<menuItem>
-															<field name="actionID">
-																<String>index_bibl</String>
 															</field>
 														</menuItem>
 													</menuEntry-array>
@@ -12854,11 +13011,6 @@ ancestor-or-self::cell[not(@rendition)]</String>
 														<menuSeparator/>
 														<menuItem>
 															<field name="actionID">
-																<String>correspContext_ref[ID]</String>
-															</field>
-														</menuItem>
-														<menuItem>
-															<field name="actionID">
 																<String>correspContext_ref[text]</String>
 															</field>
 														</menuItem>
@@ -13186,11 +13338,6 @@ ancestor-or-self::cell[not(@rendition)]</String>
 																<String>index_places</String>
 															</field>
 														</toolbarItem>
-														<toolbarItem>
-															<field name="actionID">
-																<String>index_bibl</String>
-															</field>
-														</toolbarItem>
 													</toolbarEntry-array>
 												</field>
 											</toolbar>
@@ -13238,16 +13385,6 @@ ancestor-or-self::cell[not(@rendition)]</String>
 														<toolbarItem>
 															<field name="actionID">
 																<String>placeName</String>
-															</field>
-														</toolbarItem>
-														<toolbarItem>
-															<field name="actionID">
-																<String>bibl</String>
-															</field>
-														</toolbarItem>
-														<toolbarItem>
-															<field name="actionID">
-																<String>rs[term]</String>
 															</field>
 														</toolbarItem>
 														<toolbarSeparator/>
@@ -14180,11 +14317,6 @@ ancestor-or-self::cell[not(@rendition)]</String>
 																		</field>
 																	</toolbarItem>
 																	<toolbarSeparator/>
-																	<toolbarItem>
-																		<field name="actionID">
-																			<String>correspContext_ref[ID]</String>
-																		</field>
-																	</toolbarItem>
 																	<toolbarItem>
 																		<field name="actionID">
 																			<String>correspContext_ref[text]</String>

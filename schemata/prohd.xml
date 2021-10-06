@@ -35,7 +35,7 @@
         <moduleRef key="textstructure"
           include="TEI argument back body byline closer dateline div docAuthor docDate docEdition docImprint docTitle epigraph front group imprimatur opener postscript salute signed text titlePage titlePart trailer"/>
         <moduleRef key="figures" include="cell figure figDesc formula row table"/>
-        <moduleRef key="linking" include="anchor seg linkGrp"/>
+        <moduleRef key="linking" include="anchor seg linkGrp ab"/>
         <moduleRef key="tagdocs" include="att code eg gi ident val"/>
         <moduleRef key="transcr" include="facsimile fw space subst ex supplied metamark"/>
         <moduleRef key="msdescription"
@@ -177,6 +177,7 @@
             <attDef ident="rendition" usage="req" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="#u"/>
+                <valItem ident="#i"/>
               </valList>
             </attDef>
           </attList>
@@ -272,21 +273,15 @@
             </attDef>
           </attList>
         </elementSpec>
-        <elementSpec ident="table" mode="change">
+        <!--<elementSpec ident="row" mode="change">
           <attList>
-            <attDef ident="rows" usage="req" mode="change"/>
-            <attDef ident="cols" usage="req" mode="change"/>
-          </attList>
-        </elementSpec>
-        <elementSpec ident="row" mode="change">
-          <attList>
-            <attDef ident="role" mode="change">
+            <attDef ident="role" mode="change" usage="opt">
               <valList type="closed" mode="replace">
                 <valItem ident="label"/>
               </valList>
             </attDef>
           </attList>
-        </elementSpec>
+        </elementSpec>-->
         <elementSpec ident="cell" mode="change">
           <attList>
             <attDef ident="rendition" mode="change">
@@ -398,6 +393,7 @@
             <attDef ident="type" usage="req" mode="change">
               <valList type="closed" mode="replace">
                 <valItem ident="comment"/>
+                <valItem ident="code"></valItem>
               </valList>
             </attDef>
           </attList>

@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2021-09-14T12:21:52Z. .
+Schema generated from ODD source 2021-10-05T12:53:22Z. .
 TEI Edition: Version 4.3.0. Last updated on
         31st August 2021, revision b4f72b1ff
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.3.0/
@@ -2279,29 +2279,41 @@ Los valores sugeridos incluyen: 1] volume (volume); 2] issue; 3] page (page); 4]
    <define name="tei_model.pLike">
       <choice>
          <ref name="tei_p"/>
+         <ref name="tei_ab"/>
       </choice>
    </define>
    <define name="tei_model.pLike_alternation">
       <choice>
          <ref name="tei_p"/>
+         <ref name="tei_ab"/>
       </choice>
    </define>
    <define name="tei_model.pLike_sequence">
       <ref name="tei_p"/>
+      <ref name="tei_ab"/>
    </define>
    <define name="tei_model.pLike_sequenceOptional">
       <optional>
          <ref name="tei_p"/>
+      </optional>
+      <optional>
+         <ref name="tei_ab"/>
       </optional>
    </define>
    <define name="tei_model.pLike_sequenceOptionalRepeatable">
       <zeroOrMore>
          <ref name="tei_p"/>
       </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tei_ab"/>
+      </zeroOrMore>
    </define>
    <define name="tei_model.pLike_sequenceRepeatable">
       <oneOrMore>
          <ref name="tei_p"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tei_ab"/>
       </oneOrMore>
    </define>
    <define name="tei_model.stageLike">
@@ -3176,6 +3188,8 @@ Los valores sugeridos incluyen: 1] page; 2] column; 3] line; 4] book; 5] poem; 6
                <oneOrMore>
                   <choice>
                      <value>#u</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     <value>#i</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   </choice>
                </oneOrMore>
@@ -6415,49 +6429,65 @@ Los valores sugeridos incluyen: 1] label; 2] data</a:documentation>
       <element name="table">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(table) contiene texto dispuedto en forma de tabla, con filas y columnas. [14.1.1. TEI Tables]</a:documentation>
          <group>
+      
             <zeroOrMore>
                <choice>
                   <ref name="tei_model.headLike"/>
                   <ref name="tei_model.global"/>
                </choice>
             </zeroOrMore>
+      
             <choice>
                <oneOrMore>
                   <group>
                      <ref name="tei_row"/>
+          
                      <zeroOrMore>
                         <ref name="tei_model.global"/>
                      </zeroOrMore>
+          
                   </group>
                </oneOrMore>
                <oneOrMore>
                   <group>
+          
                      <ref name="tei_model.graphicLike"/>
+          
+          
                      <zeroOrMore>
                         <ref name="tei_model.global"/>
                      </zeroOrMore>
+          
                   </group>
                </oneOrMore>
             </choice>
             <zeroOrMore>
                <group>
+        
                   <ref name="tei_model.divBottom"/>
+        
+        
                   <zeroOrMore>
                      <ref name="tei_model.global"/>
                   </zeroOrMore>
+        
                </group>
             </zeroOrMore>
          </group>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attributes"/>
-         <attribute name="rows">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(rows) indica el número de filas en una tabla.</a:documentation>
-            <data type="nonNegativeInteger"/>
-         </attribute>
-         <attribute name="cols">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(columnas) indica el número de columnas por cada fila de la tabla.</a:documentation>
-            <data type="nonNegativeInteger"/>
-         </attribute>
+         <optional>
+            <attribute name="rows">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(rows) indica el número de filas en una tabla.</a:documentation>
+               <data type="nonNegativeInteger"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="cols">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(columnas) indica el número de columnas por cada fila de la tabla.</a:documentation>
+               <data type="nonNegativeInteger"/>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
@@ -6468,19 +6498,7 @@ Los valores sugeridos incluyen: 1] label; 2] data</a:documentation>
             <ref name="tei_cell"/>
          </oneOrMore>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.tableDecoration.attribute.rows"/>
-         <ref name="tei_att.tableDecoration.attribute.cols"/>
-         <optional>
-            <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                       name="role"
-                       a:defaultValue="data">
-               <a:documentation>(role) especifica el tipo de información contenida en la celda en cuestión o en cada una de las celdas de la fila.</a:documentation>
-               <choice>
-                  <value>label</value>
-                  <a:documentation/>
-               </choice>
-            </attribute>
-         </optional>
+         <ref name="tei_att.tableDecoration.attributes"/>
          <empty/>
       </element>
    </define>
@@ -6707,6 +6725,38 @@ Los valores sugeridos incluyen: 1] label; 2] data</a:documentation>
          <empty/>
       </element>
    </define>
+   <define name="tei_ab">
+      <element name="ab">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(bloque anónimo) contiene cualquier unidad textual a nivel de componente que actua como un contenedor anónimo de sintagmas o de elementos de internivel similares al párrafo pero sin la carga semántica de este último. [16.3. Blocks, Segments, and Anchors]</a:documentation>
+         <ref name="tei_macro.paraContent"/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="prohd-ab-abstractModel-structure-ab-constraint-report-14">
+            <rule context="tei:ab">
+               <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                       xmlns:xi="http://www.w3.org/2001/XInclude"
+                       test="not(ancestor::tei:floatingText) and (ancestor::tei:p or ancestor::tei:ab)          and not(parent::tei:exemplum         |parent::tei:item         |parent::tei:note         |parent::tei:q         |parent::tei:quote         |parent::tei:remarks         |parent::tei:said         |parent::tei:sp         |parent::tei:stage         |parent::tei:cell         |parent::tei:figure)">
+        Abstract model violation: ab may not occur inside paragraphs or other ab elements.
+      </report>
+            </rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="prohd-ab-abstractModel-structure-l-constraint-report-15">
+            <rule context="tei:ab">
+               <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                       xmlns:xi="http://www.w3.org/2001/XInclude"
+                       test="(ancestor::tei:l or ancestor::tei:lg) and not(parent::tei:figure or parent::tei:note or ancestor::tei:floatingText)">
+        Abstract model violation: Lines may not contain higher-level divisions such as p or ab, unless ab is a child of figure or note, or is a descendant of floatingText.
+      </report>
+            </rule>
+         </pattern>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.declaring.attributes"/>
+         <ref name="tei_att.fragmentable.attributes"/>
+         <ref name="tei_att.written.attributes"/>
+         <empty/>
+      </element>
+   </define>
    <define name="tei_anchor">
       <element name="anchor">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(punto de anclaje) enlanza un indentificador con una posición al interno del texto, independientemente del hecho que esta sea o no a un elemento textual. [8.4.2. Synchronization and Overlap 16.5. Correspondence and Alignment]</a:documentation>
@@ -6738,6 +6788,8 @@ Los valores sugeridos incluyen: 1] label; 2] data</a:documentation>
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">caracteriza el elemento utilizando una clasificación o tipología funcional.</a:documentation>
             <choice>
                <value>comment</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>code</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             </choice>
          </attribute>
@@ -7245,7 +7297,7 @@ Posibles valores: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron; 5] H
       
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="prohd-msIdentifier-msId_minimal-constraint-report-14">
+                  id="prohd-msIdentifier-msId_minimal-constraint-report-16">
             <rule context="tei:msIdentifier">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="not(parent::tei:msPart) and (local-name(*[1])='idno' or local-name(*[1])='altIdentifier' or normalize-space(.)='')">An msIdentifier must contain either a repository or location.</report>
