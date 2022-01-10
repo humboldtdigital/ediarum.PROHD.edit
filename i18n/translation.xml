@@ -2596,6 +2596,14 @@
         <val lang="de_DE">Emanzipation</val>
         <val lang="es_ES">Emancipación</val>
     </key>
+    <key value="ask.education">
+        <val lang="de_DE">Bildung</val>
+        <val lang="es_ES">Educación</val>
+    </key>
+    <key value="ask.administration">
+        <val lang="de_DE">Verwaltung</val>
+        <val lang="es_ES">Administración</val>
+    </key>
 
     
     
