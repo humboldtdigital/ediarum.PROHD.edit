@@ -174,7 +174,7 @@
     </key>
     <key value="wit(Druck).name">
         <val lang="de_DE">Überlieferung: Druck</val>
-        <val lang="es_ES">Tradición impresa</val>
+        <val lang="es_ES">Fuente impresa</val>
     </key>
     <key value="wit(Druck).description">
         <val lang="de_DE">Nachweis eines überlieferten Drucks hinzufügen</val>
@@ -182,7 +182,7 @@
     </key>
     <key value="wit(Manuskript).name">
         <val lang="de_DE">Überlieferung: Abschrift, Entwurf ...</val>
-        <val lang="es_ES">Tradición manuscrita</val>
+        <val lang="es_ES">Fuente manuscrita</val>
     </key>
     <key value="wit(Manuskript).description">
         <val lang="de_DE">Nachweis einer weiteren Handschrift (Abschrift, Entwurf etc.)
@@ -690,11 +690,11 @@
     </key>
     <key value="msDesc_idno[uri].name">
         <val lang="de_DE">URI der Archivalie (z.B. Kalliope)</val>
-        <val lang="es_ES">URI del registro archivístico</val>
+        <val lang="es_ES">URI del registro bibliográfico</val>
     </key>
     <key value="msDesc_idno[uri].description">
         <val lang="de_DE">Fügt eine URI (z.B. aus Kalliope) der benutzten Archivalie ein</val>
-        <val lang="es_ES">Insertar una URI del registro utilizado</val>
+        <val lang="es_ES">Insertar una URI del registro bibliográfico utilizado</val>
     </key>
     <key value="sic-corr.name">
         <val lang="de_DE">Korrektur durch den Herausgeber</val>
@@ -856,7 +856,7 @@
     </key>
     <key value="symbol_macron.description">
         <val lang="de_DE"/>
-        <val lang="es_ES">Insertar una tilde de abreviación</val>
+        <val lang="es_ES">Insertar una tilde abreviativa</val>
     </key>
     <key value="spec_sign_small_o+stroke.name">
         <val lang="de_DE">ø</val>
