@@ -10,8 +10,8 @@
                 '|' has been used within the text area. </report>
         </rule>
     </pattern>
-
-
+    
+  
     <pattern id="allElements">
         <rule context="tei:*[not(self::tei:hi)]">
             <report test="@rendition and @rend" role="WARNING"> [W0002] The usage of @rend or
@@ -266,7 +266,7 @@
 
     <pattern id="teiHeaderElements">
         <rule
-            context="tei:addName | tei:address | tei:addrLine | tei:email | tei:biblFull | tei:country | tei:forename | tei:genName | tei:msDesc | tei:nameLink | tei:publicationStmt | tei:resp | tei:respStmt | tei:roleName | tei:surname | tei:titleStmt">
+            context="tei:addName | tei:address | tei:addrLine | tei:email | tei:biblFull | tei:country | tei:forename | tei:genName | tei:msDesc | tei:nameLink | tei:publicationStmt | tei:resp | tei:respStmt | tei:roleName | tei:surname | tei:titleStmt ">
             <report test="ancestor::tei:text" role="ERROR"> [E0022] Element " <name/> " not allowed
                 anywhere within element "text". </report>
         </rule>
@@ -299,20 +299,20 @@
 
     <pattern id="titleStmt">
         <rule context="tei:titleStmt">
-            <assert test="tei:editor" role="ERROR"> [E0023] A &lt;titleStmt&gt; element must contain
-                an &lt;editor&gt; element after &lt;title&gt; .</assert>
-            <report test="tei:choice" role="ERROR"> [E0024] A &lt;titleStmt&gt; element cannot
-                contain a &lt;choice&gt; element as a children.</report>
-            <assert test="tei:funder" role="ERROR"> [E0025] A &lt;titleStmt&gt; element must contain
-                a &lt;funder&gt; element after &lt;editor&gt;.</assert>
+            <assert test="tei:editor" role="ERROR"> [E0023] A &lt;titleStmt&gt; element must contain an
+                &lt;editor&gt; element after &lt;title&gt; .</assert>
+            <report test="tei:choice" role="ERROR"> [E0024] A &lt;titleStmt&gt; element cannot contain a
+                &lt;choice&gt; element as a children.</report>
+            <assert test="tei:funder" role="ERROR"> [E0025] A &lt;titleStmt&gt; element must contain a
+                &lt;funder&gt; element after &lt;editor&gt;.</assert>
         </rule>
     </pattern>
 
     <pattern id="title">
         <rule context="tei:titleStmt/tei:title">
-            <report test="child::tei:note | tei:p | tei:choice | tei:lb" role="ERROR"> [E0026] The
-                main title of the edition should be normalized and cannot contain notes, alternative
-                readings or break lines.</report>
+            <report test="child::tei:note | tei:p | tei:choice | tei:lb" role="ERROR"> [E0026] The main title
+                of the edition should be normalized and cannot contain notes, alternative readings
+                or break lines.</report>
         </rule>
     </pattern>
 
@@ -323,30 +323,28 @@
                 represented with a &lt;p&gt;.</assert>
         </rule>
         <rule context="tei:editionStmt/tei:p">
-            <report test="child::tei:note | tei:p | tei:choice | tei:lb" role="ERROR"> [E0028] The
-                edition statement should be normalized and cannot contain notes, alternative
-                readings or break lines.</report>
-            <assert test="tei:date[starts-with(., '20')]" role="ERROR"> [E0029] The edition
-                statement should contain a &lt;date&gt; (publication date, no creation
-                date).</assert>
+            <report test="child::tei:note | tei:p | tei:choice | tei:lb" role="ERROR"> [E0028] The edition
+                statement should be normalized and cannot contain notes, alternative readings or
+                break lines.</report>
+            <assert test="tei:date[starts-with(., '20')]" role="ERROR"> [E0029] The edition statement should
+                contain a &lt;date&gt; (publication date, no creation date).</assert>
         </rule>
     </pattern>
 
 
     <pattern id="publicationStmt">
         <rule context="tei:publicationStmt">
-            <assert test="tei:publisher" role="ERROR"> [E0030] A &lt;publicationStmt&gt; element
-                must contain an &lt;publisher&gt; element.</assert>
-            <assert test="tei:availability" role="ERROR"> [E0031] A &lt;publicationStmt&gt; element
-                must contain an &lt;availability&gt; element after &lt;pubPlace&gt;.</assert>
+            <assert test="tei:publisher" role="ERROR"> [E0030] A &lt;publicationStmt&gt; element must contain
+                an &lt;publisher&gt; element.</assert>
+            <assert test="tei:availability" role="ERROR"> [E0031] A &lt;publicationStmt&gt; element must
+                contain an &lt;availability&gt; element after &lt;pubPlace&gt;.</assert>
         </rule>
     </pattern>
 
     <pattern id="publisher">
         <rule context="tei:publisher">
-            <assert test="tei:ref or text()" role="ERROR"> [E0034] A &lt;publisher&gt; element must
-                contain a &lt;ref&gt; element or a text node with the name of the institution
-                publishing the digital edition.</assert>
+            <assert test="tei:ref or text()" role="ERROR"> [E0034] A &lt;publisher&gt; element must contain a
+                &lt;ref&gt; element or a text node with the name of the institution publishing the digital edition.</assert>
         </rule>
     </pattern>
 
@@ -365,32 +363,28 @@
 
     <pattern id="date">
         <rule context="tei:date">
-            <report test="@notBefore-iso or @notAfter-iso" role="error"> [E0036] The attributes
-                @notBefore-iso or @notAfter-iso are not allowed.</report>
+            <report test="@notBefore-iso or @notAfter-iso" role="error"> [E0036] The attributes @notBefore-iso or @notAfter-iso are not allowed.</report>
         </rule>
     </pattern>
-
+    
     <pattern id="idno">
         <rule context="tei:idno">
             <report test="text()[matches(., '\?+$')]" role="WARNING"> [W0008] The uncommon character
-                '??' has been used within the text area. If you are not sure about the content,
-                leave the element empty.</report>
+                '??' has been used within the text area. If you are not sure about the content, leave the element empty.</report>
         </rule>
     </pattern>
-
+    
     <pattern id="abstract">
         <rule context="tei:abstract">
-            <assert test="@xml:lang" role="WARNING"> [E0037] The attribute @xml:lang is
-                compulsory.</assert>
+            <assert test="@xml:lang" role="WARNING"> [E0037] The attribute @xml:lang is compulsory.</assert>
         </rule>
     </pattern>
 
     <pattern id="language">
         <rule context="tei:language">
-            <assert test="@ident" role="WARNING"> [E0038] The attribute @ident is
-                compulsory.</assert>
+            <assert test="@ident" role="WARNING"> [E0038] The attribute @ident is compulsory.</assert>
         </rule>
     </pattern>
-
+    
 
 </schema>

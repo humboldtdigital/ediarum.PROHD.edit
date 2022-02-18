@@ -948,7 +948,7 @@
     </key>
     <key value="facsimile.description">
         <val lang="de_DE">Links oder Identifier von Digitalisaten notieren</val>
-        <val lang="es_ES">Etiquetar enlaces o identificadores de los facsímiles digitales</val>
+        <val lang="es_ES">Enlazar a los facsímiles digitales</val>
     </key>
     <key value="profileDesc_creation_persName.name">
         <val lang="de_DE">Autor des Manuskripts</val>
