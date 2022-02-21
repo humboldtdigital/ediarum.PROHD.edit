@@ -2604,7 +2604,19 @@
         <val lang="de_DE">Verwaltung</val>
         <val lang="es_ES">Administración</val>
     </key>
-
+    <key value="ask.tobacco">
+        <val lang="de_DE">Tabak</val>
+        <val lang="es_ES">Tabaco</val>
+    </key>
+    <key value="ask.factories">
+        <val lang="de_DE">Fabriken</val>
+        <val lang="es_ES">Fábricas</val>
+    </key>
+    <key value="ask.scientificexpedition">
+        <val lang="de_DE">Forschungsreisen</val>
+        <val lang="es_ES">Expedición científica</val>
+    </key>
+    
     
     
     <!-- prohd templates -->
