@@ -39,7 +39,7 @@
         <moduleRef key="tagdocs" include="att code eg gi ident val"/>
         <moduleRef key="transcr" include="facsimile fw space subst ex supplied metamark"/>
         <moduleRef key="msdescription"
-          include="physDesc msDesc msIdentifier institution collection repository"/>
+          include="physDesc msDesc msIdentifier institution collection repository msName"/>
         <moduleRef key="textcrit" include="listWit witness"/>
         <moduleRef key="namesdates"
           include="persName placeName surname forename orgName listPerson listOrg listPlace person org place occupation affiliation birth death floruit"/>
