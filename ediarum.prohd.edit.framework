@@ -11006,7 +11006,7 @@ ancestor-or-self::cell[not(@rendition)]</String>
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;textClass xmlns="http://www.tei-c.org/ns/1.0">&lt;catRef  scheme="#genre"  target="${ask('${i18n(ask.genre)}', combobox, ('#diaries':'${i18n(ask.diaries)}';'#essays':'${i18n(ask.essays)}'; '#notebooks':'${i18n(ask.notebooks)}';'#correspondence':'${i18n(ask.correspondence)}';'#travelwriting':'${i18n(ask.travelwriting)}'; ))}">&lt;/catRef>&lt;/textClass>
+																		<String>&lt;textClass xmlns="http://www.tei-c.org/ns/1.0">&lt;catRef  scheme="#genre"  target="${ask('${i18n(ask.genre)}', combobox, ('#diaries':'${i18n(ask.diaries)}';'#essays':'${i18n(ask.essays)}'; '#notebooks':'${i18n(ask.notebooks)}';'#correspondence':'${i18n(ask.correspondence)}';'#travelwriting':'${i18n(ask.travelwriting)}';'#records':'${i18n(ask.records)}';'#minutes':'${i18n(ask.minutes)}'; ))}">&lt;/catRef>&lt;/textClass>
 </String>
 																	</entry>
 																	<entry>
@@ -11031,7 +11031,7 @@ ancestor-or-self::cell[not(@rendition)]</String>
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;textClass xmlns="http://www.tei-c.org/ns/1.0">&lt;catRef  scheme="#genre"  target="${ask('${i18n(ask.genre)}', combobox, ('#diaries':'${i18n(ask.diaries)}';'#essays':'${i18n(ask.essays)}'; '#notebooks':'${i18n(ask.notebooks)}';'#correspondence':'${i18n(ask.correspondence)}';'#travelwriting':'${i18n(ask.travelwriting)}'; ))}">&lt;/catRef>&lt;/textClass>
+																		<String>&lt;textClass xmlns="http://www.tei-c.org/ns/1.0">&lt;catRef  scheme="#genre"  target="${ask('${i18n(ask.genre)}', combobox, ('#diaries':'${i18n(ask.diaries)}';'#essays':'${i18n(ask.essays)}'; '#notebooks':'${i18n(ask.notebooks)}';'#correspondence':'${i18n(ask.correspondence)}';'#travelwriting':'${i18n(ask.travelwriting)}'; '#records':'${i18n(ask.records)}';'#minutes':'${i18n(ask.minutes)}'; ))}">&lt;/catRef>&lt;/textClass>
 </String>
 																	</entry>
 																	<entry>
@@ -11056,7 +11056,7 @@ ancestor-or-self::cell[not(@rendition)]</String>
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;textClass xmlns="http://www.tei-c.org/ns/1.0">&lt;catRef  scheme="#genre"  target="${ask('${i18n(ask.genre)}', combobox, ('#diaries':'${i18n(ask.diaries)}';'#essays':'${i18n(ask.essays)}'; '#notebooks':'${i18n(ask.notebooks)}';'#correspondence':'${i18n(ask.correspondence)}';'#travelwriting':'${i18n(ask.travelwriting)}'; ))}">&lt;/catRef>&lt;/textClass></String>
+																		<String>&lt;textClass xmlns="http://www.tei-c.org/ns/1.0">&lt;catRef  scheme="#genre"  target="${ask('${i18n(ask.genre)}', combobox, ('#diaries':'${i18n(ask.diaries)}';'#essays':'${i18n(ask.essays)}'; '#notebooks':'${i18n(ask.notebooks)}';'#correspondence':'${i18n(ask.correspondence)}';'#travelwriting':'${i18n(ask.travelwriting)}'; '#records':'${i18n(ask.records)}';'#minutes':'${i18n(ask.minutes)}';))}">&lt;/catRef>&lt;/textClass></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -11080,7 +11080,7 @@ ancestor-or-self::cell[not(@rendition)]</String>
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;textClass  xmlns="http://www.tei-c.org/ns/1.0">&lt;catRef scheme="#genre"  target="${ask('${i18n(ask.genre)}', combobox, ('#diaries':'${i18n(ask.diaries)}';'#essays':'${i18n(ask.essays)}'; '#notebooks':'${i18n(ask.notebooks)}';'#correspondence':'${i18n(ask.correspondence)}';'#travelwriting':'${i18n(ask.travelwriting)}'; ))}">&lt;/catRef>&lt;/textClass>
+																		<String>&lt;textClass  xmlns="http://www.tei-c.org/ns/1.0">&lt;catRef scheme="#genre"  target="${ask('${i18n(ask.genre)}', combobox, ('#diaries':'${i18n(ask.diaries)}';'#essays':'${i18n(ask.essays)}'; '#notebooks':'${i18n(ask.notebooks)}';'#correspondence':'${i18n(ask.correspondence)}';'#travelwriting':'${i18n(ask.travelwriting)}';'#records':'${i18n(ask.records)}';'#minutes':'${i18n(ask.minutes)}'; ))}">&lt;/catRef>&lt;/textClass>
 
 </String>
 																	</entry>
@@ -11106,7 +11106,7 @@ ancestor-or-self::cell[not(@rendition)]</String>
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;catRef xmlns="http://www.tei-c.org/ns/1.0" scheme="#genre"  target="${ask('${i18n(ask.genre)}', combobox, ('#diaries':'${i18n(ask.diaries)}';'#essays':'${i18n(ask.essays)}'; '#notebooks':'${i18n(ask.notebooks)}';'#correspondence':'${i18n(ask.correspondence)}';'#travelwriting':'${i18n(ask.travelwriting)}'; ))}">&lt;/catRef></String>
+																		<String>&lt;catRef xmlns="http://www.tei-c.org/ns/1.0" scheme="#genre"  target="${ask('${i18n(ask.genre)}', combobox, ('#diaries':'${i18n(ask.diaries)}';'#essays':'${i18n(ask.essays)}'; '#notebooks':'${i18n(ask.notebooks)}';'#correspondence':'${i18n(ask.correspondence)}';'#travelwriting':'${i18n(ask.travelwriting)}';'#records':'${i18n(ask.records)}';'#minutes':'${i18n(ask.minutes)}';))}">&lt;/catRef></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -11342,7 +11342,7 @@ ancestor-or-self::cell[not(@rendition)]</String>
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;textClass xmlns="http://www.tei-c.org/ns/1.0">&lt;catRef  scheme="#subject"  target="${ask('${i18n(ask.subject)}', combobox, ('#climatology':'${i18n(ask.climatology)}';  '#colonialism':'${i18n(ask.colonialism)}';    '#demography':'${i18n(ask.demography)}';  '#economicconditions':'${i18n(ask.economicconditions)}';    '#geography':'${i18n(ask.geography)}';   '#medicine':'${i18n(ask.medicine)}';  '#science':'${i18n(ask.science)}';  '#plantations':'${i18n(ask.plantations)}';  '#coffee':'${i18n(ask.coffee)}';  '#sugar':'${i18n(ask.sugar)}';  '#slavery':'${i18n(ask.slavery)}';  '#trade':'${i18n(ask.trade)}';  '#emancipation':'${i18n(ask.emancipation)}';  '#education':'${i18n(ask.education)}';  '#administration':'${i18n(ask.administration)}'; '#tobacco':'${i18n(ask.tobacco)}' ; '#factories':'${i18n(ask.factories)}'; '#scientificexpedition':'${i18n(ask.scientificexpedition)}' ;   ))}">&lt;/catRef>&lt;/textClass></String>
+																		<String>&lt;textClass xmlns="http://www.tei-c.org/ns/1.0">&lt;catRef  scheme="#subject"  target="${ask('${i18n(ask.subject)}', combobox, ('#climatology':'${i18n(ask.climatology)}';  '#colonialism':'${i18n(ask.colonialism)}';    '#demography':'${i18n(ask.demography)}';  '#economicconditions':'${i18n(ask.economicconditions)}';    '#geography':'${i18n(ask.geography)}';   '#medicine':'${i18n(ask.medicine)}';  '#science':'${i18n(ask.science)}';  '#plantations':'${i18n(ask.plantations)}';  '#coffee':'${i18n(ask.coffee)}';  '#sugar':'${i18n(ask.sugar)}';  '#slavery':'${i18n(ask.slavery)}';  '#trade':'${i18n(ask.trade)}';  '#emancipation':'${i18n(ask.emancipation)}';  '#education':'${i18n(ask.education)}';  '#administration':'${i18n(ask.administration)}'; '#tobacco':'${i18n(ask.tobacco)}' ; '#factories':'${i18n(ask.factories)}'; '#scientificexpedition':'${i18n(ask.scientificexpedition)}' ;  '#scientificexpedition':'${i18n(ask.scientificexpedition)}' ;  '#geology':'${i18n(ask.geology)}';  '#mineralogy':'${i18n(ask.mineralogy)}';  ))}">&lt;/catRef>&lt;/textClass></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -11366,7 +11366,7 @@ ancestor-or-self::cell[not(@rendition)]</String>
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;textClass xmlns="http://www.tei-c.org/ns/1.0">&lt;catRef  scheme="#subject"  target="${ask('${i18n(ask.subject)}', combobox, ('#climatology':'${i18n(ask.climatology)}';  '#colonialism':'${i18n(ask.colonialism)}';    '#demography':'${i18n(ask.demography)}';  '#economicconditions':'${i18n(ask.economicconditions)}';    '#geography':'${i18n(ask.geography)}';   '#medicine':'${i18n(ask.medicine)}';  '#science':'${i18n(ask.science)}';  '#plantations':'${i18n(ask.plantations)}';  '#coffee':'${i18n(ask.coffee)}';  '#sugar':'${i18n(ask.sugar)}';  '#slavery':'${i18n(ask.slavery)}';  '#trade':'${i18n(ask.trade)}';  '#emancipation':'${i18n(ask.emancipation)}';  '#education':'${i18n(ask.education)}';  '#administration':'${i18n(ask.administration)}'; '#tobacco':'${i18n(ask.tobacco)}' ; '#factories':'${i18n(ask.factories)}'; '#scientificexpedition':'${i18n(ask.scientificexpedition)}'   ;   ))}">&lt;/catRef>&lt;/textClass></String>
+																		<String>&lt;textClass xmlns="http://www.tei-c.org/ns/1.0">&lt;catRef  scheme="#subject"  target="${ask('${i18n(ask.subject)}', combobox, ('#climatology':'${i18n(ask.climatology)}';  '#colonialism':'${i18n(ask.colonialism)}';    '#demography':'${i18n(ask.demography)}';  '#economicconditions':'${i18n(ask.economicconditions)}';    '#geography':'${i18n(ask.geography)}';   '#medicine':'${i18n(ask.medicine)}';  '#science':'${i18n(ask.science)}';  '#plantations':'${i18n(ask.plantations)}';  '#coffee':'${i18n(ask.coffee)}';  '#sugar':'${i18n(ask.sugar)}';  '#slavery':'${i18n(ask.slavery)}';  '#trade':'${i18n(ask.trade)}';  '#emancipation':'${i18n(ask.emancipation)}';  '#education':'${i18n(ask.education)}';  '#administration':'${i18n(ask.administration)}'; '#tobacco':'${i18n(ask.tobacco)}' ; '#factories':'${i18n(ask.factories)}'; '#scientificexpedition':'${i18n(ask.scientificexpedition)}'   ;  '#geology':'${i18n(ask.geology)}';  '#mineralogy':'${i18n(ask.mineralogy)}'; ))}">&lt;/catRef>&lt;/textClass></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -11390,7 +11390,7 @@ ancestor-or-self::cell[not(@rendition)]</String>
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;textClass xmlns="http://www.tei-c.org/ns/1.0">&lt;catRef  scheme="#subject"  target="${ask('${i18n(ask.subject)}', combobox, ('#climatology':'${i18n(ask.climatology)}';  '#colonialism':'${i18n(ask.colonialism)}';    '#demography':'${i18n(ask.demography)}';  '#economicconditions':'${i18n(ask.economicconditions)}';    '#geography':'${i18n(ask.geography)}';   '#medicine':'${i18n(ask.medicine)}';  '#science':'${i18n(ask.science)}';  '#plantations':'${i18n(ask.plantations)}';  '#coffee':'${i18n(ask.coffee)}';  '#sugar':'${i18n(ask.sugar)}';  '#slavery':'${i18n(ask.slavery)}';  '#trade':'${i18n(ask.trade)}';  '#emancipation':'${i18n(ask.emancipation)}';  '#education':'${i18n(ask.education)}';  '#administration':'${i18n(ask.administration)}'; '#tobacco':'${i18n(ask.tobacco)}' ; '#factories':'${i18n(ask.factories)}'; '#scientificexpedition':'${i18n(ask.scientificexpedition)}';   ))}">&lt;/catRef>&lt;/textClass></String>
+																		<String>&lt;textClass xmlns="http://www.tei-c.org/ns/1.0">&lt;catRef  scheme="#subject"  target="${ask('${i18n(ask.subject)}', combobox, ('#climatology':'${i18n(ask.climatology)}';  '#colonialism':'${i18n(ask.colonialism)}';    '#demography':'${i18n(ask.demography)}';  '#economicconditions':'${i18n(ask.economicconditions)}';    '#geography':'${i18n(ask.geography)}';   '#medicine':'${i18n(ask.medicine)}';  '#science':'${i18n(ask.science)}';  '#plantations':'${i18n(ask.plantations)}';  '#coffee':'${i18n(ask.coffee)}';  '#sugar':'${i18n(ask.sugar)}';  '#slavery':'${i18n(ask.slavery)}';  '#trade':'${i18n(ask.trade)}';  '#emancipation':'${i18n(ask.emancipation)}';  '#education':'${i18n(ask.education)}';  '#administration':'${i18n(ask.administration)}'; '#tobacco':'${i18n(ask.tobacco)}' ; '#factories':'${i18n(ask.factories)}'; '#scientificexpedition':'${i18n(ask.scientificexpedition)}'; '#geology':'${i18n(ask.geology)}';  '#mineralogy':'${i18n(ask.mineralogy)}';  ))}">&lt;/catRef>&lt;/textClass></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -11414,7 +11414,7 @@ ancestor-or-self::cell[not(@rendition)]</String>
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;textClass xmlns="http://www.tei-c.org/ns/1.0">&lt;catRef  scheme="#subject"  target="${ask('${i18n(ask.subject)}', combobox, ('#climatology':'${i18n(ask.climatology)}';  '#colonialism':'${i18n(ask.colonialism)}';    '#demography':'${i18n(ask.demography)}';  '#economicconditions':'${i18n(ask.economicconditions)}';    '#geography':'${i18n(ask.geography)}';   '#medicine':'${i18n(ask.medicine)}';  '#science':'${i18n(ask.science)}';  '#plantations':'${i18n(ask.plantations)}';  '#coffee':'${i18n(ask.coffee)}';  '#sugar':'${i18n(ask.sugar)}';  '#slavery':'${i18n(ask.slavery)}';  '#trade':'${i18n(ask.trade)}';  '#emancipation':'${i18n(ask.emancipation)}';  '#education':'${i18n(ask.education)}';  '#administration':'${i18n(ask.administration)}'; '#tobacco':'${i18n(ask.tobacco)}' ; '#factories':'${i18n(ask.factories)}'; '#scientificexpedition':'${i18n(ask.scientificexpedition)}';  ))}">&lt;/catRef>&lt;/textClass></String>
+																		<String>&lt;textClass xmlns="http://www.tei-c.org/ns/1.0">&lt;catRef  scheme="#subject"  target="${ask('${i18n(ask.subject)}', combobox, ('#climatology':'${i18n(ask.climatology)}';  '#colonialism':'${i18n(ask.colonialism)}';    '#demography':'${i18n(ask.demography)}';  '#economicconditions':'${i18n(ask.economicconditions)}';    '#geography':'${i18n(ask.geography)}';   '#medicine':'${i18n(ask.medicine)}';  '#science':'${i18n(ask.science)}';  '#plantations':'${i18n(ask.plantations)}';  '#coffee':'${i18n(ask.coffee)}';  '#sugar':'${i18n(ask.sugar)}';  '#slavery':'${i18n(ask.slavery)}';  '#trade':'${i18n(ask.trade)}';  '#emancipation':'${i18n(ask.emancipation)}';  '#education':'${i18n(ask.education)}';  '#administration':'${i18n(ask.administration)}'; '#tobacco':'${i18n(ask.tobacco)}' ; '#factories':'${i18n(ask.factories)}'; '#scientificexpedition':'${i18n(ask.scientificexpedition)}'; '#geology':'${i18n(ask.geology)}';  '#mineralogy':'${i18n(ask.mineralogy)}'; ))}">&lt;/catRef>&lt;/textClass></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -11438,7 +11438,7 @@ ancestor-or-self::cell[not(@rendition)]</String>
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;catRef xmlns="http://www.tei-c.org/ns/1.0"  scheme="#subject"  target="${ask('${i18n(ask.subject)}', combobox, ('#climatology':'${i18n(ask.climatology)}';  '#colonialism':'${i18n(ask.colonialism)}';    '#demography':'${i18n(ask.demography)}';  '#economicconditions':'${i18n(ask.economicconditions)}';    '#geography':'${i18n(ask.geography)}';   '#medicine':'${i18n(ask.medicine)}';  '#science':'${i18n(ask.science)}';  '#plantations':'${i18n(ask.plantations)}';  '#coffee':'${i18n(ask.coffee)}';  '#sugar':'${i18n(ask.sugar)}';  '#slavery':'${i18n(ask.slavery)}';  '#trade':'${i18n(ask.trade)}';  '#emancipation':'${i18n(ask.emancipation)}';  '#education':'${i18n(ask.education)}';  '#administration':'${i18n(ask.administration)}'; '#tobacco':'${i18n(ask.tobacco)}' ; '#factories':'${i18n(ask.factories)}'; '#scientificexpedition':'${i18n(ask.scientificexpedition)}';   ))}">&lt;/catRef></String>
+																		<String>&lt;catRef xmlns="http://www.tei-c.org/ns/1.0"  scheme="#subject"  target="${ask('${i18n(ask.subject)}', combobox, ('#climatology':'${i18n(ask.climatology)}';  '#colonialism':'${i18n(ask.colonialism)}';    '#demography':'${i18n(ask.demography)}';  '#economicconditions':'${i18n(ask.economicconditions)}';    '#geography':'${i18n(ask.geography)}';   '#medicine':'${i18n(ask.medicine)}';  '#science':'${i18n(ask.science)}';  '#plantations':'${i18n(ask.plantations)}';  '#coffee':'${i18n(ask.coffee)}';  '#sugar':'${i18n(ask.sugar)}';  '#slavery':'${i18n(ask.slavery)}';  '#trade':'${i18n(ask.trade)}';  '#emancipation':'${i18n(ask.emancipation)}';  '#education':'${i18n(ask.education)}';  '#administration':'${i18n(ask.administration)}'; '#tobacco':'${i18n(ask.tobacco)}' ; '#factories':'${i18n(ask.factories)}'; '#scientificexpedition':'${i18n(ask.scientificexpedition)}'; '#geology':'${i18n(ask.geology)}';  '#mineralogy':'${i18n(ask.mineralogy)}';  ))}">&lt;/catRef></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>

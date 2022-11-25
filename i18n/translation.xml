@@ -2528,6 +2528,14 @@
         <val lang="de_DE">Reiseberichte</val>
         <val lang="es_ES">Narraciones de viaje</val>
     </key>
+    <key value="ask.records">
+        <val lang="de_DE">Akte</val>
+        <val lang="es_ES">Registros</val>
+    </key>
+    <key value="ask.minutes">
+        <val lang="de_DE">Protokolle</val>
+        <val lang="es_ES">Protocolos</val>
+    </key>
     <key value="ask.form">
         <val lang="de_DE">Publikationsform</val>
         <val lang="es_ES">Forma</val>
@@ -2615,6 +2623,14 @@
     <key value="ask.scientificexpedition">
         <val lang="de_DE">Forschungsreisen</val>
         <val lang="es_ES">Expedición científica</val>
+    </key>
+    <key value="ask.geology">
+        <val lang="de_DE">Geologie</val>
+        <val lang="es_ES">Geología</val>
+    </key>
+    <key value="ask.mineralogy">
+        <val lang="de_DE">Mineralogie</val>
+        <val lang="es_ES">Mineralogía</val>
     </key>
     
     
