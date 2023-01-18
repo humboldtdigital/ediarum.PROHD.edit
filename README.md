@@ -4,6 +4,7 @@
 - Oxygen XML editor *framework* based on [ediarum.BASE.edit](https://www.ediarum.org/).
 - Development and localisation into Spanish by Antonio Rojas Castro.
 - Contact: antonio.rojas-castro[at]bbaw.de
+- [![DOI](https://zenodo.org/badge/311324944.svg)](https://zenodo.org/badge/latestdoi/311324944)
 
 ## Installation
 
@@ -30,6 +31,7 @@
 - Oxygen XML editor *framework* basado en [ediarum.BASE.edit](https://www.ediarum.org/).
 - Desarrollo y localización al español de Antonio Rojas Castro.
 - Contacto: antonio.rojas-castro[at]bbaw.de
+- [![DOI](https://zenodo.org/badge/311324944.svg)](https://zenodo.org/badge/latestdoi/311324944)
 
 ## Instalación
 
@@ -56,6 +58,7 @@
 - Oxygen-XML-Editor *Framework* basierend auf [ediarum.BASE.edit](https://www.ediarum.org/).
 - Entwicklung und Lokalisierung ins Spanische von Antonio Rojas Castro.
 - Ansprechpartner: antonio.rojas-castro[at]bbaw.de
+- [![DOI](https://zenodo.org/badge/311324944.svg)](https://zenodo.org/badge/latestdoi/311324944)
 
 ## Installation
 
